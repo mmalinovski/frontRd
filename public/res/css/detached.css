@@ -1,0 +1,48 @@
+
+.page-bg {
+	background-image: url("../img/b370a6690ab1131c9396db063e701b33.jpg");
+	background-size:cover;
+	-webkit-filter: blur(40px);
+	-moz-filter: blur(40px);
+	-o-filter: blur(40px);
+	-ms-filter: blur(40px);
+	filter: blur(40px);
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:-1;
+}
+h1, p {
+	color: white;
+}
+.icon-background3 {
+    color: #c0ffff;
+}
+a {
+	color: white;
+}
+
+.columnButtons {
+	margin: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.volumeProgress {
+    background: #333;
+    border-radius: 13px;
+    height: 5px;
+    padding: 3px;
+    width: 200px;
+
+}
+.volumeProgress:after {
+    content: '';
+    display: block;
+    background: orange;
+    width: 50%;
+    height: 100%;
+    border-radius: 9px;
+}

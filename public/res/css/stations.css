@@ -1,0 +1,112 @@
+#radioStation {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.stationText  {
+	margin-top: 15px !important;
+	margin-bottom: 15px !important;
+	margin-left: 60px !important; 
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+}
+.addToFavorite {
+	margin-top: 50px;
+	color: gray;
+}
+.addToFavorite:hover {
+	color: black;
+}
+
+#stationColumn1 img {
+	border-radius: 50px;
+}
+
+#stationColumn2 {
+	margin-left: 15px;
+	align-self: flex-start;
+	width: 100%;
+}
+
+.socialMediaButtonsForStations {
+	margin-left: 10px;
+	margin-top: 40px;
+}
+
+.socialMediaButtonsForStations .fa {
+	padding: 10px;
+	font-size: 20px;
+	width: 70px;
+	text-align: center;
+	text-decoration: none;
+	opacity: 0.8;
+}
+.socialMediaButtonsForStations .fa:hover { 
+	opacity: 1;
+}
+.socialMediaButtonsForStations .fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+.socialMediaButtonsForStations .fa-twitter {
+	background: #55ACEE;
+	color: white;
+}
+.socialMediaButtonsForStations .fa-google {
+	background: #dd4b39;
+	color: white;
+}
+
+.mobileApps {
+	margin-top: 80px;
+}
+
+#aboutStation span  {
+	font-size: 24px;
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#aboutStation p {
+	padding: 40px;
+	margin-left: 50px;
+	font-size: 19px;
+
+}
+
+#aboutStation a {
+	color: gray;
+}
+#aboutStation a:hover {
+	color: #2B499B;
+}
+
+#aboutStation {
+	margin-top: 50px;
+}
+
+#similarStations a {
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	text-align: center;
+	align-items: center;
+	color: #000;
+	display: block;
+}
+
+
+#similarStations a span {
+  display: block;
+
+}
+
+#similarStations img {
+	border-radius: 20px;
+	width: 200px;
+	height: 200px;
+}
+
+

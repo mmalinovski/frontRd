@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.flex_container
+{
+ display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-align-content: flex-end;
+	align-content: flex-end;
+
+}
+
+
+.flexTop {
+  align-items: flex-start;
+}
+
+
+.columnItemLogo
+{
+	 
+	padding: 5px;
+	width: 320px;
+	height: 320px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.columnItem {
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	text-align: center;
+  align-items: center;
+
+}
+
+
+.headerStyle {
+	font-size: 27px;
+	color: #695757;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 50px;
+	border-top: 1px solid #000;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+hr {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+.moreStations {
+	background: #34495E;
+	outline: none;
+	margin-top: -1px;
+	margin-bottom: 10px;
+	border: none;
+	text-decoration: none;
+	font-weight: 700;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 7px 40px;
+
+}
+.moreStations:hover {
+	background: #17202A;
+}
+.moreStations:active {
+	border: none;
+	background-color: #17202A;
+	box-shadow: 0 2px #17202A;
+	transform: translateY(1px);
+}
+.floatL {
+	float: left;
+}
