@@ -26,6 +26,8 @@
 
 #stationColumn1 img {
 	border-radius: 50px;
+	width: 300px;
+	height: 300px;
 }
 
 #stationColumn2 {
@@ -115,8 +117,10 @@
 
 .favoriteHeart {
 	position: absolute;
-	bottom: 138px;
-	right: 122px;
+	bottom: 50%;
+	right: 50%;
+	margin-bottom: -25px;
+	margin-right: -25px;
 	height: 50px;
 	width: 50px;
 	opacity: 0.8;
