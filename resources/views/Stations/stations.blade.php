@@ -8,6 +8,7 @@
 		<h1 class="headerStyle">90.2  Knight Rock Radio</h1>
 		<div id="radioStation">
 			<div id="stationColumn1">
+				<a href="#" class="round-button favoriteHeart"><i class="fa fa-heart" aria-hidden="true"></i></a>
 				<a href="#">
 					<img src="res/img/latest/2059-p1-300X300.png" alt="radio">
 				</a>

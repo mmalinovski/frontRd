@@ -20,6 +20,10 @@
 	color: black;
 }
 
+#stationColumn1 {
+	position: relative;
+}
+
 #stationColumn1 img {
 	border-radius: 50px;
 }
@@ -109,4 +113,15 @@
 	height: 200px;
 }
 
+.favoriteHeart {
+	position: absolute;
+	bottom: 138px;
+	right: 122px;
+	height: 50px;
+	width: 50px;
+	opacity: 0.8;
+	color: #ff3f00;
+	background-color: #52646d;
+	border: none;
+}
 
