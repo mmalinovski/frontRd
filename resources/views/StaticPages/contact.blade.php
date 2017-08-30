@@ -3,7 +3,9 @@
 @section('content')
 
 <main>
-	Contact Page...
+	<section class="staticWrapper">
+		<p>Welcome to LiveNetworks radio! If you have questions, feedback or suggestions on the service of LiveNetworks or on cooperations, please feel free to contact us on this e-mail: <b><i>contact@livenetworks.com</i></b></p>
+	</section>
 </main>
 
 

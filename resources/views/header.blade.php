@@ -11,18 +11,18 @@
                 <li>
                     <a href="{{route('genres')}}">Genres</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="{{route('stations')}}">Stations</a>
+                </li> -->
+                <li>
+                    <a href="{{route('staticPage', ['url' =>'about'])}}">About</a>
                 </li>
                 <li>
-                    <a href="#">Streams</a>
+                    <a href="{{route('staticPage', ['url' =>'contact'])}}">Contact</a>
                 </li>
-                <li>
-                    <a href="#">Local Radio</a>
-                </li>
-                <li>
+               <!--  <li>
                     <a href="#">Live Streams</a>
-                </li>
+                </li> -->
                     
             </ul>
         </nav>

@@ -24,7 +24,6 @@
 
 				@endforeach
 			</ul>
-			
 		</aside>
 
 		<div id="genresContent">
