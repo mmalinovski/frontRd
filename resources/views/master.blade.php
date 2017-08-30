@@ -28,16 +28,6 @@
             ])
         !!}
 
-
-       <!--  
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <link rel="stylesheet" type="text/css" href="css/base.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/player.css">
-        <link rel="stylesheet" type="text/css" href="css/genres.css">
-        <link rel="stylesheet" type="text/css" href="css/stations.css"> -->
-
-
         <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
     <!-- S c r i p t s -->

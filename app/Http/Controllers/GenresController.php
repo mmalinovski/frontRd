@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Genre;
 
 class GenresController extends Controller
 {
@@ -23,6 +24,16 @@ class GenresController extends Controller
      */
     public function index()
     {
-        return view('Genres.genres');
+        $genres = Genre::simplePaginate(10);
+        return view('Genres.listOfGenres')->with('genres', $genres);
     }
+
+
+    public function genre($slug) {
+        $genre = Genre::where('slug', $slug)->with('stations.details')->first();
+        $genres = Genre::all();
+
+        return view('Genres.genres')->with('genres', $genres)->with('genre', $genre);
+    }
+
 }

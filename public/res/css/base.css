@@ -61,7 +61,21 @@ hr {
 }
 
 
-.moreStations {
+.pagination li {
+	display: inline;
+}
+
+.pagination a {
+	color: white;
+}
+
+.pagination {
+	text-align: center;
+	margin-top: 50px;
+
+}
+
+.moreStations, .pagination li {
 	background: #34495E;
 	outline: none;
 	margin-top: -1px;

@@ -18,6 +18,24 @@ a{
 
 }
 
+.squareTypeList{
+	list-style-type: circle;
+	padding-left: 40px;
+}
+.decimalTypeList {
+	list-style-type: decimal;
+	padding-left: 20px;
+}
+
+.staticWrapper{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 200px;
+	padding-right: 200px;
+}
+.staticWrapper p {
+	font-family: 'Open Sans', sans-serif;
+}
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;

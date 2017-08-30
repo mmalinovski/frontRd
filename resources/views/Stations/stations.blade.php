@@ -5,12 +5,14 @@
 <main>
 
 	<section class="wrapper">
-		<h1 class="headerStyle">90.2  Knight Rock Radio</h1>
+		<h1 class="headerStyle">
+			{{ $station->name }}
+		 Radio</h1>
 		<div id="radioStation">
 			<div id="stationColumn1">
 				<a href="#" class="round-button favoriteHeart"><i class="fa fa-heart" aria-hidden="true"></i></a>
 				<a href="#">
-					<img src="res/img/latest/2059-p1-300X300.png" alt="radio">
+					<img src="{{ $station->details->logo }}" alt="radio">
 				</a>
 			</div>
 			<div id="stationColumn2">
@@ -24,10 +26,10 @@
 					</div>
 					<div class="mobileApps">
 						<a href="#">
-							<img src="res/img/mobile/android.png" alt="android" width="150" height="50">
+							<img src="/res/img/mobile/android.png" alt="android" width="150" height="50">
 						</a>
 						<a href="#">
-							<img src="res/img/mobile/ios.png" alt="android" width="150" height="50">
+							<img src="/res/img/mobile/ios.png" alt="android" width="150" height="50">
 						</a>
 					</div>
 			</div>
@@ -37,7 +39,7 @@
 
 	<section id="aboutStation" class="wrapper">
 		<i class="fa fa-info-circle fa-2x" aria-hidden="true"><span>  About Knight Rock Radio 90.2</span></i>
-		<p>Check out the station's <a href="#">website</a> for more info!</p>
+		<p>{{ $station->details->info }} Visit <a href="#">website</a> for more info!</p>
 				
 	</section>
 

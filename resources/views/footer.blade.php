@@ -14,27 +14,27 @@
 		<div class="columnItem footerSpace">
 			<h2>LEGAL</h2>
 			<ul>
-				<li><a href="#" class="linkPadding">Terms of use</a></li>
-				<li><a href="#" class="linkPadding">Privacy Policy</a></li>
-				<li><a href="#" class="linkPadding">Legal Notice</a></li>
+				<li><a href="{{route('staticPage', ['url' =>'terms-and-conditions'])}}" class="linkPadding">Terms and Conditions</a></li>
+				<li><a href="{{route('staticPage', ['url' =>'privacy-policy'])}}" class="linkPadding">Privacy Policy</a></li>
+				<li><a href="{{route('staticPage', ['url' =>'legal-notice'])}}" class="linkPadding">Legal Notice</a></li>
 			</ul>
 		</div>
 
 		<div class="columnItem footerSpace">
 			<h2>SERVICE</h2>
 			<ul>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">Apps</a></li>
-				<li><a href="#">Help/FAQ</a></li>
+				<li><a href="{{route('staticPage', ['url' =>'contact'])}}">Contact</a></li>
+				<li><a href="{{route('staticPage', ['url' =>'apps'])}}">Apps</a></li>
+				<li><a href="{{route('staticPage', ['url' =>'help-faq'])}}">Help/FAQ</a></li>
 			</ul>
 		</div>
 
 		<div class="columnItem footerSpace">
 			<h2>APPS</h2>
 			<ul>
-				<li><a href="#">iPhone</a></li>
-				<li><a href="#">iPad</a></li>
-				<li><a href="#">Android</a></li>
+				<li><a href="{{route('staticPage', ['url' =>'iPhone'])}}">iPhone</a></li>
+				<li><a href="{{route('staticPage', ['url' =>'iPad'])}}">iPad</a></li>
+				<li><a href="{{route('staticPage', ['url' =>'android'])}}">Android</a></li>
 			</ul>
 		</div>
 
