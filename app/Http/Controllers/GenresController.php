@@ -24,7 +24,7 @@ class GenresController extends Controller
      */
     public function index()
     {
-        $genres = Genre::simplePaginate(10);
+        $genres = Genre::simplePaginate(20);
         return view('Genres.listOfGenres')->with('genres', $genres);
     }
 
