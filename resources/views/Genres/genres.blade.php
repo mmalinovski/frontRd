@@ -45,7 +45,7 @@
 							<img src="/logos/{{ @$station->slug }}.png" alt="klymaxx">
 							<span class="currentTrack">
 								<span id="stationName">{{$station->name }}</span>
-								<span id="stationDetails">{{str_limit(@$station->details->info, 60)}}</span>
+								<span id="stationDetails">{{str_limit(ucfirst(strtolower(@$station->details->info)), 60)}}</span>
 								@if(empty(@$station->details->info))
 								<span id="stationDetails">Click for more!</span>
 								@endif
