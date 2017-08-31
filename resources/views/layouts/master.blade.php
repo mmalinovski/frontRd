@@ -55,9 +55,11 @@
             @endif
         </div> -->
         @include('header')
-        @yield('content')
-        @include('playerFixed')
+        <section>
+            @yield('content')
+        </section>
         @include('footer')
+        @include('playerFixed')
 
 
     </body>

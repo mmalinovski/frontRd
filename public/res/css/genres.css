@@ -89,6 +89,7 @@ aside li a:hover {
 }
 
 #genresContainer {
+	overflow: hidden;
 	clear: both;
 }
 
@@ -123,6 +124,7 @@ aside li a:hover {
 	height: 100%;
 }
 #genresContainer span {
+	overflow: hidden;
 	display: block;
 	padding-left: 5px;
 	padding-bottom: 5px;
@@ -135,7 +137,18 @@ aside li a:hover {
 	left: 0;
 	right: 0;
 }
+#stationName {
+	font-weight: 900;
+	color: red !important;
+}
+#stationDetails {
+	margin-right: 80px;
+	overflow: hidden;
+	clear: both;
+}
+
 .plej {
+	clear: both;
 	position: absolute;
 	bottom: 35px;
 	right: 20px;

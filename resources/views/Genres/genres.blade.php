@@ -1,4 +1,4 @@
-@extends('master')
+@extends(($params->isAjax ? 'layouts.ajax' : 'layouts.master'))
 
 @section('content')
 
@@ -44,17 +44,21 @@
 						<a href="#" class="glavno">
 							<img src="/logos/{{ @$station->slug }}.png" alt="klymaxx">
 							<span class="currentTrack">
-								<span>{{$station->name }}</span>
-								<span>{{@$station->details->info}}</span>
+								<span id="stationName">{{$station->name }}</span>
+								<span id="stationDetails">{{str_limit(@$station->details->info, 60)}}</span>
+								@if(empty(@$station->details->info))
+								<span id="stationDetails">Click for more!</span>
+								@endif
 							</span>
 						</a>
 
-						<audio controls>
+						<audio id="audioPlayer">
 						@foreach($station->streams as $stream)
 							<source src="{{$stream->listenurl}}" type="{{$stream->type}}">
+							
 						@endforeach
 						</audio>
-						<a href="#" class="plej round-button"><i class="fa fa-play" aria-hidden="true"></i></a>
+						<a id="playButton" class="plej round-button"><i class="fa fa-play" aria-hidden="true"></i></a>
 					</li>
 					@endforeach
 					
@@ -65,6 +69,18 @@
 
 </main>
 
+<script>
+	var audioPlayer = document.getElementById('audioPlayer');
+	var playButton = document.getElementById('playButton')
+	playButton.onclick = function() {
+		if( !audioPlayer.paused && !audioPlayer.ended ) {
+    		audioPlayer.pause();
+    	}
+    	else {
+    		audioPlayer.play();
+    	}
+}
+</script>
 
 
 
