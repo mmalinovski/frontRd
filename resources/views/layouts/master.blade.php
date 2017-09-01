@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html >
 <html lang="{{ config('app.locale') }}"
   prefix="mo: http://purl.org/ontology/mo/
   dc: http://purl.org/dc/elements/1.1/
@@ -14,8 +14,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- S T Y L E S -->
-        <script src="https://use.fontawesome.com/32c9731015.js"></script>
-
         {!!
             Minify::stylesheet([
                 "/res/css/reset.css",
@@ -40,7 +38,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     </head>
-    <body>
+    <body data-ng:controller="MainController" ng-app="radioApp">
 
         <!-- <div>
             @if (Route::has('login'))
@@ -55,11 +53,19 @@
             @endif
         </div> -->
         @include('header')
-        <section>
+        <section ui-view="Content">
             @yield('content')
         </section>
         @include('footer')
         @include('playerFixed')
+
+
+        <script src="https://use.fontawesome.com/32c9731015.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+        <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="{{ asset('/res/js/angularApp.js') }}"></script>
+        <script src="{{ asset('/res/js/routes.js') }}"></script>
+
 
 
     </body>

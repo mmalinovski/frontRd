@@ -2,6 +2,8 @@
 
 @section('content')
 
+{{ $params->isAjax }}
+
 <main>
 
 
@@ -52,7 +54,7 @@
 							</span>
 						</a>
 
-						<audio id="audioPlayer">
+						<audio id="audioPlayer" preload="none">
 						@foreach($station->streams as $stream)
 							<source src="{{$stream->listenurl}}" type="{{$stream->type}}">
 							
@@ -70,16 +72,16 @@
 </main>
 
 <script>
-	var audioPlayer = document.getElementById('audioPlayer');
-	var playButton = document.getElementById('playButton')
-	playButton.onclick = function() {
-		if( !audioPlayer.paused && !audioPlayer.ended ) {
-    		audioPlayer.pause();
-    	}
-    	else {
-    		audioPlayer.play();
-    	}
-}
+// 	var audioPlayer = document.getElementById('audioPlayer');
+// 	var playButton = document.getElementById('playButton')
+// 	playButton.onclick = function() {
+// 		if( !audioPlayer.paused && !audioPlayer.ended ) {
+//     		audioPlayer.pause();
+//     	}
+//     	else {
+//     		audioPlayer.play();
+//     	}
+// }
 </script>
 
 

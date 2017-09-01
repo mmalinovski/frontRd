@@ -20,7 +20,9 @@ abstract class LnController extends \App\Http\Controllers\Controller {
 		$this->request = $request;
 
 		$viewParams = new \StdClass();
-		$viewParams->isAjax = false;
+		// $viewParams->isAjax = Request::ajax();
+
+		dd($request->ajax());
 
 		\View::share('params', $viewParams);
 	}
