@@ -1,9 +1,10 @@
 <?php
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
+use App\LiveNetworks\LnModel;
 
 
-class RadioDetail extends Model {
+class RadioDetail extends LnModel {
 
 	protected $table = "radioDetails";
 	

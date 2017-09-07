@@ -2,9 +2,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\LiveNetworks\LnModel;
 
 
-class Station extends Model {
+
+class Station extends LnModel {
 
 	protected $table = "radio";
 

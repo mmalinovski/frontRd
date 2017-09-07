@@ -2,7 +2,7 @@
 
 @section('content')
 
-{{ $params->isAjax }}
+
 
 <main>
 
@@ -13,11 +13,10 @@
 			<h1>Genres</h1>
 			
 			<ul>
-
-				@foreach ($genres as $g) 
+				@foreach ($genres->all() as $g) 
 					<?php $active = ''; ?>
-					@if($g->slug == $genre->slug)
-						<?php $active = ' class="active"'; ?>
+					@if($g->active)
+						<?php $active = ' class="active" '; ?>
 					@endif
 					<li>
 						<a href="{{route('genre', ['slug' => $g->slug])}}" {!! $active !!}>{{ $g->name }}</a>
@@ -30,10 +29,7 @@
 
 		<div id="genresContent">
 				<h1 class="">
-				@if(isset($genre))
-					{{ $genre->name }}
-
-				@endif
+					{{ $genres->active->name }}
 
 				 Stations</h1>
 				<form id="searchbox" action="">
@@ -41,25 +37,28 @@
 					<input id="submit" type="submit" value="Search">
 				</form>
 				<ul id="genresContainer" class="flex_container">
-					@foreach($genre->stations as $station)
+					<?php $s = $stations->byGenre($genres->active->slug) ?>
+					@foreach($s as $station)
 					<li>
-						<a href="#" class="glavno">
-							<img src="/logos/{{ @$station->slug }}.png" alt="klymaxx">
+						<a href="{{ route('station', ['slug' => $station->slug]) }}" class="glavno">
+							<img src="/logos/{{ @$station->slug }}.png" alt="{{$station->name}}">
 							<span class="currentTrack">
 								<span id="stationName">{{$station->name }}</span>
-								<span id="stationDetails">{{str_limit(ucfirst(strtolower(@$station->details->info)), 60)}}</span>
-								@if(empty(@$station->details->info))
+								<span id="stationDetails">{{str_limit(ucfirst(strtolower(@$station->info)), 60)}}</span>
+								@if(empty(@$station->info))
 								<span id="stationDetails">Click for more!</span>
 								@endif
 							</span>
 						</a>
 
-						<audio id="audioPlayer" preload="none">
-						@foreach($station->streams as $stream)
+						 <!-- Audio Player -->
+						 <audio id="audioPlayer" preload="none">
+						 @foreach($streams->byStation($station->id) as $stream) 
 							<source src="{{$stream->listenurl}}" type="{{$stream->type}}">
 							
-						@endforeach
+						 @endforeach 
 						</audio>
+						
 						<a id="playButton" class="plej round-button"><i class="fa fa-play" aria-hidden="true"></i></a>
 					</li>
 					@endforeach
@@ -71,18 +70,7 @@
 
 </main>
 
-<script>
-// 	var audioPlayer = document.getElementById('audioPlayer');
-// 	var playButton = document.getElementById('playButton')
-// 	playButton.onclick = function() {
-// 		if( !audioPlayer.paused && !audioPlayer.ended ) {
-//     		audioPlayer.pause();
-//     	}
-//     	else {
-//     		audioPlayer.play();
-//     	}
-// }
-</script>
+
 
 
 

@@ -3,17 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\LiveNetworks\LnController;
 
-class HomePageController extends Controller
+
+class HomePageController extends LnController
 {
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Request $request)
     {
-        // $this->middleware('auth');
+         parent::__construct($request);
     }
 
     /**

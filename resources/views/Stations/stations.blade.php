@@ -6,17 +6,30 @@
 
 	<section class="wrapper">
 		<h1 class="headerStyle">
-			{{ $station->name }}
+		{{ $station->name }}
+			
 		 Radio</h1>
 		<div id="radioStation">
 			<div id="stationColumn1">
 				<a href="#" class="round-button favoriteHeart"><i class="fa fa-heart" aria-hidden="true"></i></a>
 				<a href="#">
-					<img src="{{ $station->details->logo }}" alt="radio">
+					<img src="{{$station->details->logo}}" alt="radio">
 				</a>
 			</div>
 			<div id="stationColumn2">
-					<a href="#" class="round-button floatL"><i class="fa fa-pause" aria-hidden="true"></i></a>
+
+
+				 <!-- Audio Player -->
+						 <audio id="audioPlayer" preload="none">
+						 @foreach($streams->byStation($station->id) as $stream) 
+							<source src="{{$stream->listenurl}}" type="{{$stream->type}}">
+							
+						 @endforeach 
+						</audio>
+
+
+
+					<a  id="playButton" class="round-button floatL"><i class="fa fa-pause" aria-hidden="true"></i></a>
 					<p class="stationText">Pink Floyd - Another Brick In The Wall</p>
 					<a href="#" class="addToFavorite"><i class="fa fa-heart-o" aria-hidden="true"><span> Add to favorites</span></i></a>
 					<div class="socialMediaButtonsForStations">
@@ -38,8 +51,9 @@
 	</section>
 
 	<section id="aboutStation" class="wrapper">
-		<i class="fa fa-info-circle fa-2x" aria-hidden="true"><span>  About Knight Rock Radio 90.2</span></i>
-		<p>{{ $station->details->info }} Visit <a href="#">website</a> for more info!</p>
+		<i class="fa fa-info-circle fa-2x" aria-hidden="true"><span>  About {{$station->name}}</span></i>
+		<p>{{$station->details->info}}</p>
+		<p> Visit <a href="#">website</a> for more info!</p>
 				
 	</section>
 
@@ -127,5 +141,19 @@
 
 			</section>
 	</main>
+
+
+	<script>
+	var audioPlayer = document.getElementById('audioPlayer');
+	var playButton = document.getElementById('playButton')
+	playButton.onclick = function() {
+		if( !audioPlayer.paused && !audioPlayer.ended ) {
+    		audioPlayer.pause();
+    	}
+    	else {
+    		audioPlayer.play();
+    	}
+}
+</script>
 
 @endsection

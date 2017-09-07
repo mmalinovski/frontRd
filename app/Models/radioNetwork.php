@@ -1,7 +1,9 @@
 <?php
 namespace App\Models\;
+use App\LiveNetworks\LnModel;
 
-class radioNetwork extends Model {
+
+class RadioNetwork extends LnModel {
 
 	protected $table = "radioNetwork";
 	

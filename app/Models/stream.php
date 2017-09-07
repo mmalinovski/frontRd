@@ -1,9 +1,11 @@
 <?php
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
+use App\LiveNetworks\LnModel;
 
 
-class Stream extends Model {
+
+class Stream extends LnModel {
 
 	protected $table = "stream";
 

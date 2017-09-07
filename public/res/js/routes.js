@@ -10,7 +10,7 @@ angular.module('radioApp')
 					url: "/",
 					views: {
 						"Content@": {
-							templateUrl: "/",
+							templateUrl: "/?ajax=true",
 							// controller: ""
 						}
 					}
@@ -19,19 +19,59 @@ angular.module('radioApp')
 					url: "/genres",
 					views: {
 						"Content@": {
-							templateUrl: "/genres",
+							templateUrl: "/genres/?ajax=true",
 							// controller: ""
 						}
 					}
 				})
 				.state("genres.stationsList", {
-					url: "/genres/:slug",
+					url: "/:slug",
 					views: {
 						"Content@": {
-							templateUrl: "/genres/:slug",
+							templateUrl: function($stateParams) {
+								return "/genres/"+$stateParams.slug+'?ajax=true';
+							},
+
+							// controller: ""
+						}
+					}
+				})
+				.state("about", {
+					url: "/about.html",
+					views: {
+						"Content@": {
+							templateUrl: "/about.html?ajax=true",
+							// controller: ""
+						}
+					}
+				})
+				.state("contact", {
+					url: "/contact.html",
+					views: {
+						"Content@": {
+							templateUrl: "/contact.html?ajax=true",
+							// controller: ""
+						}
+					}
+				})
+				.state("station", {
+					url: "/stations/:slug",
+					views: {
+						"Content@": {
+							templateUrl: function($stateParams) {
+								return "/stations/"+$stateParams.slug+'?ajax=true';
+							},
+
 							// controller: ""
 						}
 					}
 				})
 		}
 	])
+
+
+
+
+
+
+

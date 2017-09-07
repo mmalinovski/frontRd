@@ -1,8 +1,8 @@
-@extends('layouts.master')
-
+@extends(($params->isAjax ? 'layouts.ajax' : 'layouts.master'))
 @section('content')
 
 	
+
 
 
 	<main>
