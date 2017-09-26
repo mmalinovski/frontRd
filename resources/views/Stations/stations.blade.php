@@ -29,8 +29,15 @@
 
 
 
-					<a  id="playButton" class="round-button floatL"><i class="fa fa-pause" aria-hidden="true"></i></a>
-					<p class="stationText">Pink Floyd - Another Brick In The Wall</p>
+					<a  id="playButton" ng-click="playPausePlayer()" class="round-button floatL"><i class="fa" 
+						data-ng:class="{
+								'fa-pause': player.playing && (currentStation.radioTitle == '{{$station->name }}'),
+								'fa-spinner fa-pulse': !player.playing && (currentStation.radioTitle == '{{$station->name }}') && shouldPlay,
+								'fa-play': (currentStation.radioTitle != '{{$station->name }}') || (!player.playing && (currentStation.radioTitle == '{{$station->name }}') && !shouldPlay)
+							}"
+						aria-hidden="true"></i></a>
+
+					<p class="stationText">{{ $station->name }}</p>
 					<a href="#" class="addToFavorite"><i class="fa fa-heart-o" aria-hidden="true"><span> Add to favorites</span></i></a>
 					<div class="socialMediaButtonsForStations">
 						<a href="#" class="fa fa-facebook"></a>
@@ -142,18 +149,5 @@
 			</section>
 	</main>
 
-
-	<script>
-	var audioPlayer = document.getElementById('audioPlayer');
-	var playButton = document.getElementById('playButton')
-	playButton.onclick = function() {
-		if( !audioPlayer.paused && !audioPlayer.ended ) {
-    		audioPlayer.pause();
-    	}
-    	else {
-    		audioPlayer.play();
-    	}
-}
-</script>
 
 @endsection

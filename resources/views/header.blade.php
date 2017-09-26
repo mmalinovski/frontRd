@@ -1,8 +1,7 @@
 <header>
         <h1 id="logo">
-            <img src="/res/img/logo/logogoeshere-1.jpg" alt="Logo" height="60">
+            <img src="/res/img/logo/NextTuner-lightBG.png" alt="Logo" height="60">
         </h1>
-        <!-- <h1>Live Radio</h1> -->
         <nav>
             <ul>
                 <li>

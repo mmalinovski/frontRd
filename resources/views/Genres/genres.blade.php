@@ -32,18 +32,22 @@
 					{{ $genres->active->name }}
 
 				 Stations</h1>
+
 				<form id="searchbox" action="">
 					<input id="search" type="text" placeholder="Search genres">
 					<input id="submit" type="submit" value="Search">
 				</form>
-				<ul id="genresContainer" class="flex_container">
+				<ul id="genresContainer" class="flex_container">	
 					<?php $s = $stations->byGenre($genres->active->slug) ?>
+					<?php $i = 0 ?>
 					@foreach($s as $station)
-					<li>
+
+					<li semantic-meta execute="addStation(station)">
+
 						<a href="{{ route('station', ['slug' => $station->slug]) }}" class="glavno">
-							<img src="/logos/{{ @$station->slug }}.png" alt="{{$station->name}}">
+							<img semantic-img="src" src="/logos/{{ @$station->slug }}.png" alt="{{$station->name}}">
 							<span class="currentTrack">
-								<span id="stationName">{{$station->name }}</span>
+								<span semantic-name id="stationName">{{$station->name }}</span>
 								<span id="stationDetails">{{str_limit(ucfirst(strtolower(@$station->info)), 60)}}</span>
 								@if(empty(@$station->info))
 								<span id="stationDetails">Click for more!</span>
@@ -52,21 +56,29 @@
 						</a>
 
 						 <!-- Audio Player -->
-						 <audio id="audioPlayer" preload="none">
+						 <audio semantic-playlist id="audioPlayer" preload="none">
 						 @foreach($streams->byStation($station->id) as $stream) 
-							<source src="{{$stream->listenurl}}" type="{{$stream->type}}">
+							<source src="{{$stream->listenurl}}" type="{{$stream->type}}" semantic-playlist-source="src" semantic-playlist-type="type">
 							
 						 @endforeach 
 						</audio>
-						
-						<a id="playButton" class="plej round-button"><i class="fa fa-play" aria-hidden="true"></i></a>
+						<button class="plej round-button" data-ng:click="setStation({{ $i }})"><i class="fa" 
+							data-ng:class="{
+								'fa-pause': player.playing && (currentStation.radioTitle == '{{$station->name }}'),
+								'fa-spinner fa-pulse': !player.playing && (currentStation.radioTitle == '{{$station->name }}') && shouldPlay,
+								'fa-play': (currentStation.radioTitle != '{{$station->name }}') || (!player.playing && (currentStation.radioTitle == '{{$station->name }}') && !shouldPlay)
+							}"
+							aria-hidden="true"></i></button>
 					</li>
+
+					<?php $i++?>
 					@endforeach
 					
 				</ul>
 		</div>
 
 	</section>
+
 
 </main>
 

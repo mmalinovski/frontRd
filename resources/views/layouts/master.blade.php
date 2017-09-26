@@ -22,6 +22,7 @@
                 "/res/css/player.css",
                 "/res/css/genres.css",
                 "/res/css/stations.css",
+                "/res/css/slider.css"
 
             ])
         !!}
@@ -29,7 +30,8 @@
         <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
     <!-- S c r i p t s -->
-    <script src="http://kumanovonews.com/_assets/js/jquery-1.10.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="http://kumanovonews.com/_assets/js/jquery-1.10.2.min.js"></script> -->
     <!-- <script type="text/javascript" src="res/js/zaheder.js"></script> -->
 
         <title>Player</title>
@@ -38,7 +40,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     </head>
-    <body data-ng:controller="MainController" ng-app="radioApp">
+    <body data-ng:controller="MainController" ng-app="radioApp" ng-cloak>
 
         <!-- <div>
             @if (Route::has('login'))
@@ -65,6 +67,12 @@
         <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script src="{{ asset('/res/js/angularApp.js') }}"></script>
         <script src="{{ asset('/res/js/routes.js') }}"></script>
+        <script src="{{ asset('/res/global/directives/semanticMeta.js') }}"></script>
+        <script src="{{ asset('/res/global/directives/mediaPlayer.js') }}"></script>
+        <script src="{{ asset('/res/global/modules/ngStorage.js') }}"></script>
+        <script src="{{ asset('/res/global/directives/rangeSlider.js') }}"></script>
+
+
 
 
 
