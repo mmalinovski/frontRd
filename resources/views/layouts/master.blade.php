@@ -14,6 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- S T Y L E S -->
+
         {!!
             Minify::stylesheet([
                 "/res/css/reset.css",
@@ -22,13 +23,15 @@
                 "/res/css/player.css",
                 "/res/css/genres.css",
                 "/res/css/stations.css",
-                "/res/css/slider.css"
+                "/res/css/search.css",
+                "/res/css/slider.css",
+                "/res/css/uiSelect.css"
 
             ])
         !!}
 
         <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
     <!-- S c r i p t s -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script src="http://kumanovonews.com/_assets/js/jquery-1.10.2.min.js"></script> -->
@@ -71,6 +74,11 @@
         <script src="{{ asset('/res/global/directives/mediaPlayer.js') }}"></script>
         <script src="{{ asset('/res/global/modules/ngStorage.js') }}"></script>
         <script src="{{ asset('/res/global/directives/rangeSlider.js') }}"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
+
+        <script src="{{ asset('/res/js/uiSelect.js') }}"></script>
+        
+
 
 
 

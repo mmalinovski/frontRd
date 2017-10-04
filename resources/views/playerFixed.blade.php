@@ -24,10 +24,10 @@
 			
 	</div>
 
-	<div class="columnButtons">
+	<div class="columnButtons" id="listBtn">
 		<button class="round-button"><i class="fa fa-th-list" aria-hidden="true"></i></button>
 	</div>
-	<div class="columnButtons">
+	<div class="columnButtons" id="detachedBtn">
 		<a href="#" class="roundVolume"><i class="fa fa-window-restore" aria-hidden="true"></i></a>
 	</div>
 </div>

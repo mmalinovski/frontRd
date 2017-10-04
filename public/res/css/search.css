@@ -1,0 +1,43 @@
+.searchModule {
+    position: relative;
+    padding: 50px;
+}
+.searchModule input {
+    width: 400px;
+    height: 27px;
+    border: 1px solid #a7aabc;
+    border-radius: 6px;
+    padding-left: 15px;
+}
+
+::-webkit-input-placeholder {
+    color: #a7aabc;
+    font-weight: 200;
+    font-style: italic;
+
+}
+.searchModule ul {
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    padding: 10px;
+    background-color: #FFF;
+    z-index: 999999;
+    width: 80%;
+}
+.searchModule ul a:link, .searchModule ul a:visited {
+    color: #404040; 
+}
+.searchModule ul a:hover {
+    background-color: #404040; color: #FFF; 
+}
+
+.searchModule ul li {
+    padding: 3px 0; 
+}
+
+.searchModule li a {
+    display: block;
+        width: 100%;
+
+}

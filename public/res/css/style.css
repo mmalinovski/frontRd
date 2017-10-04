@@ -35,9 +35,21 @@ a{
 	margin: 0 auto;
 	padding-left: 200px;
 	padding-right: 200px;
+	margin-top: 150px;
+	margin-bottom: 300px;
+
 }
 .staticWrapper p {
 	font-family: 'Open Sans', sans-serif;
+	padding: 5px;
+	line-height: 31px;
+	text-indent: 50px;
+
+}
+.staticWrapper b {
+	font-weight: bold;
+	font-size: 30px;
+	font-style: italic;
 }
 .wrapper {
   max-width: 1200px;
@@ -77,10 +89,11 @@ header {
 
 header nav {
   /*position: absolute;*/
-  bottom: 0;
+  /*bottom: 0;*/
   height: 60px;
-  line-height: 60px;
+  /*line-height: 60px;*/
   width: 100%;
+  padding-top: 20px;
 }
 
 header nav li {
@@ -189,8 +202,8 @@ body.sticky-header header h1  {
 	border: 1px solid #ECF0F1;
 	background-color: #ECF0F1;
 	text-align: center;
-	line-height: 80px; /* <- changed this */
-	box-sizing: border-box; /* <- added this */
+	line-height: 70px; 
+	box-sizing: border-box; 
 	margin: 10px;
 	width: 220px;
 	height: 70px;
@@ -213,6 +226,11 @@ body.sticky-header header h1  {
   align-items: center;
   color: #000;
   display: block;
+}
+
+#featuredStations li {
+	width: 200px;
+	padding: 10px;
 }
 #featuredStations a span {
   display: block;
@@ -278,6 +296,33 @@ body.sticky-header header h1  {
 .columnImagePlaying img {
 	width: 65px;
 	height: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+    .columnImagePlaying img {
+        display: none;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #listBtn {
+        display: none;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #detachedBtn {
+        display: none;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #track {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #genreSection aside {
+    	display: none;
+    }
 }
 
 .parallax {

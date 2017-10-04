@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 
 Route::get('/', 'HomePageController@index')->name('homePage');
+Route::get('/listOfStations', 'HomePageController@ListOfStations')->name('listOfStations');
 Route::get('/genres', 'GenresController@index')->name('genres');
 Route::get('/genres/{slug}', 'GenresController@genre')->name('genre');
 Route::get('/stations', 'StationsController@index')->name('stations');

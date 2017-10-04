@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\LiveNetworks\LnController;
+use App\Models\Station;
+use App\Models\Genre;
+use App\Models\RadioDetail;
+use Illuminate\Support\Facades\Storage;
+
 
 
 class HomePageController extends LnController
@@ -25,6 +30,20 @@ class HomePageController extends LnController
      */
     public function index()
     {
-        return view('home.homePage');
+        $genres = Genre::simplePaginate(20);
+
+        $randomStations = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(10)->get();
+        $randomStationsEditor = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(7)->get();
+        $randomStationsPopular = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(10)->get();
+
+
+        return view('home.homePage')->with('genres', $genres)->with('randomStations', $randomStations)->with('randomStationsEditor', $randomStationsEditor)->with('randomStationsPopular', $randomStationsPopular);
+    }
+
+
+    public function ListOfStations() {
+        $stationsList = Station::all();
+        return $stationsList;
+
     }
 }

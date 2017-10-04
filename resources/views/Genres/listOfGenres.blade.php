@@ -21,7 +21,8 @@
 					@endforeach	
 				</ul>
 
-					{{ $genres->render() }}
+					{{ $genres->links() }}
+
 				<div class="columnItem">
 					<!-- <button class="moreStations">More Genres</button> -->
 				</div>

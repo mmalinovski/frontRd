@@ -31,6 +31,7 @@ class GenresController extends LnController
     public function index()
     {
         $genres = Genre::simplePaginate(20);
+        
         return view('Genres.listOfGenres')->with('genres', $genres);
     }
 

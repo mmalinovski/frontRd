@@ -4,8 +4,7 @@
 
 
 
-<main>
-
+<main data-ng:init="resetStations()">
 
 	<section id="genreSection">
 
@@ -29,9 +28,7 @@
 
 		<div id="genresContent">
 				<h1 class="">
-					{{ $genres->active->name }}
-
-				 Stations</h1>
+					{{ $genres->active->name }} Stations</h1>
 
 				<form id="searchbox" action="">
 					<input id="search" type="text" placeholder="Search genres">
@@ -45,9 +42,9 @@
 					<li semantic-meta execute="addStation(station)">
 
 						<a href="{{ route('station', ['slug' => $station->slug]) }}" class="glavno">
-							<img semantic-img="src" src="/logos/{{ @$station->slug }}.png" alt="{{$station->name}}">
+							<img semantic-logo="src" src="{{ $station->logo }}" alt="{{$station->name}}">
 							<span class="currentTrack">
-								<span semantic-name id="stationName">{{$station->name }}</span>
+								<span semantic-name class="stationName">{{$station->name }}</span>
 								<span id="stationDetails">{{str_limit(ucfirst(strtolower(@$station->info)), 60)}}</span>
 								@if(empty(@$station->info))
 								<span id="stationDetails">Click for more!</span>
@@ -58,15 +55,15 @@
 						 <!-- Audio Player -->
 						 <audio semantic-playlist id="audioPlayer" preload="none">
 						 @foreach($streams->byStation($station->id) as $stream) 
-							<source src="{{$stream->listenurl}}" type="{{$stream->type}}" semantic-playlist-source="src" semantic-playlist-type="type">
+							<source semantic-src="src" src="{{$stream->listenurl}}" semantic-type="type" type="{{$stream->type}}" semantic-playlist-source="src" semantic-playlist-type="type">
 							
 						 @endforeach 
 						</audio>
 						<button class="plej round-button" data-ng:click="setStation({{ $i }})"><i class="fa" 
 							data-ng:class="{
-								'fa-pause': player.playing && (currentStation.radioTitle == '{{$station->name }}'),
-								'fa-spinner fa-pulse': !player.playing && (currentStation.radioTitle == '{{$station->name }}') && shouldPlay,
-								'fa-play': (currentStation.radioTitle != '{{$station->name }}') || (!player.playing && (currentStation.radioTitle == '{{$station->name }}') && !shouldPlay)
+								'fa-pause': player.playing && (currentStation.radioTitle == '{{ e($station->name) }}'),
+								'fa-spinner fa-pulse': !player.playing && (currentStation.radioTitle == '{{ e($station->name) }}') && shouldPlay,
+								'fa-play': (currentStation.radioTitle != '{{$station->name }}') || (!player.playing && (currentStation.radioTitle == '{{ e($station->name) }}') && !shouldPlay)
 							}"
 							aria-hidden="true"></i></button>
 					</li>

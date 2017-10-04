@@ -5,57 +5,75 @@ var app = angular
 	'ui.router',
 	'ngStorage',
 	'mediaPlayer',
-	'ui-rangeSlider'
+	'ui-rangeSlider',
+	'ngSanitize',
+	'ui.select',
 ])
 
-.controller('MainController', ['$scope', '$localStorage', '$sessionStorage', '$timeout',
-	function($scope, $localStorage, $sessionStorage, $timeout) {
+.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$sessionStorage', '$timeout',
+	function($rootScope, $scope, $localStorage, $sessionStorage, $timeout) {
 
 		$scope.currentStation = {};
 		$scope.stations = [];
 		$scope.shouldPlay = false;
 
+		$rootScope.$on('$stateChangeEnd', 
+			function(event, toState, toParams, fromState, fromParams, options){ 
+				$scope.stations = [];
+				console.log('Treba da izbrise nizu');
+			}
+		);
 
+
+		$scope.playingStation = {};
 		$scope.playPausePlayer = function() {
-			//console.log('fixed play button pressed!');
-			//console.log($scope.player);
-			// $scope.player.playPause();
 
-			if($scope.player.playing) {
-				$scope.player.stop();
-				$scope.shouldPlay = false; 
+			if ($scope.playingStation.radioTitle == $scope.currentStation.radioTitle) {
 
-			}else{
-				$scope.player.play();
+				if($scope.player.playing) {
+					$scope.player.stop();
+					$scope.shouldPlay = false; 
+
+				}else{
+					console.log('treba da pocne');
+
+					$timeout(function() {
+						$scope.player.play();
+					}, 200);
+					$scope.shouldPlay = true;
+
+				}
+			}
+			else {
+				console.log('treba da gi napravi isti');
+				$scope.playingStation = angular.copy($scope.currentStation);
+
+				$timeout(function() {
+					$scope.player.play();
+				}, 200);
 				$scope.shouldPlay = true;
 			}
+
 		}
 		
 		$scope.setStation = function(index) {
-			$scope.currentStation = $scope.stations[index];
 			
-
-			$timeout(function() {
-				$scope.playPausePlayer();
-				// $scope.player.playing ? $scope.player.stop() : $scope.player.play();
-			}, 500);
-			// console.log($scope.player);
-			//console.log('Play button clicked!');
+			$scope.currentStation = $scope.stations[index];
+			$scope.playPausePlayer();
+			
 		}
 
-
+		$scope.resetStations = function() {
+			$scope.stations = [];
+		}
 
 		$scope.addStation = function(station) {
-			// console.log(station);
 			$scope.stations.push(station);
-			//console.log('Staion pushed to array!');
 		}
 
 		$scope.loading = false;
 		$scope.playing = false;
 		$scope.volumeSlider = false;
-
-
 
 		$scope.volume = {
 			max: $localStorage.volume || 100
@@ -70,4 +88,23 @@ var app = angular
 		
 	}
 
+]).controller('SearchController', ['$scope', '$http',
+	function ($scope, $http) {
+		$http.get("/listOfStations")
+			.then(function(response) {
+				$scope.listOfStations = response.data;
+  			});		
+
+  			$scope.showResults = false;	
+    }
 ]);
+
+
+
+
+
+
+
+
+
+

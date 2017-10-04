@@ -108,6 +108,19 @@ aside li a:hover {
 	opacity: 0.9;
 }
 
+@media only screen and (max-width: 500px) {
+   #genresContainer a.glavno {
+   		width: 300px;
+   }
+
+}
+@media only screen and (max-width: 650px) {
+   #genresContainer a.glavno {
+   		width: 350px;
+   }
+
+}
+
 
 #genresContainer a:hover {
 	
@@ -137,7 +150,7 @@ aside li a:hover {
 	left: 0;
 	right: 0;
 }
-#stationName {
+.stationName {
 	font-weight: 900;
 	color: red !important;
 }

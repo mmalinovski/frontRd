@@ -6,57 +6,29 @@ app.directive('semanticMeta', function($compile, $rootScope, $timeout){
 		},
 		link: function($scope, element, attrs) {
 
-			var radioEl = element.find('.glavno');
-			var audioStream = element.find('#audioPlayer');
-			var radioMeta = {
-				imageUrl: radioEl.find('img').attr('src'),
-				radioTitle: radioEl.find('.currentTrack').find('#stationName').text(),
-				radioStream: [
-					{
-						src: audioStream.find('source').attr('src'),
-						type: audioStream.find('source').attr('type')
-					}
-				]
-			}
+			var radioMeta = {};
 
-			
-			// console.log(radioMeta);
+			radioMeta.radioTitle = element.find('[semantic-name]').text();
 
+			var logo = element.find('[semantic-logo]')[0];
+			radioMeta.imageUrl = logo.getAttribute(logo.getAttribute('semantic-logo'));
 
+			radioMeta.radioStream = []
 
+			var streamDetails = {}
 
-
-
-			// var children = [];
-			// var semanticData = element.children();
-			
-			// $.each(semanticData, function(i, item) {
-			// 	children.push(item);
-			// });
-
-			// //console.log(children);
-
-			// for (var i = 0; i < children.length; i++) {
-			// 	var semanticChildren = $(children[i][0]).children();
-				
-			// 	$.each(semanticChildren, function(i, item) {
-			// 		console.log(item.attr('semantic'));
-			// 	});
-			// }
-
-
-
-
+			try{
+				var streamSrc = element.find('[semantic-src]')[0];
+				streamDetails.src = streamSrc.getAttribute(streamSrc.getAttribute('semantic-src'));
+				var streamType = element.find('[semantic-type]')[0];
+				streamDetails.type = streamType.getAttribute(streamType.getAttribute('semantic-type'));
+				radioMeta.radioStream.push(streamDetails);
+				}catch(e) {
+					console.log('The error is: ',e);
+				}
 
 			$scope.execute({station: radioMeta});
 
-
-
-			// console.log('Radio img path:');
-			// console.log(radioMeta.imageUlr);
-			// console.log('Radio title: ' + radioMeta.radioTitle);
-			//console.log(radioMeta);
-			//console.log($scope.semanticResult);
 		},
 		controller: function($scope) {
 		}

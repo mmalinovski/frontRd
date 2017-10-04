@@ -4,7 +4,7 @@
 
 		<div class="columnItem footerSpace">
 			<!-- <h3>Live <span>Networks</span></h3> -->
-			<h2>Live Networks</h2>
+			<h2>Internet Radio</h2>
 			<a href="#" class="footer-icons"><i class="fa fa-facebook"></i></a>
 			<a href="#" class="footer-icons"><i class="fa fa-twitter"></i></a>
 			<a href="#" class="footer-icons"><i class="fa fa-linkedin"></i></a>
