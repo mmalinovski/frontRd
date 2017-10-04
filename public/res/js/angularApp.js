@@ -20,9 +20,12 @@ var app = angular
 		$rootScope.$on('$stateChangeEnd', 
 			function(event, toState, toParams, fromState, fromParams, options){ 
 				$scope.stations = [];
-				console.log('Treba da izbrise nizu');
 			}
 		);
+		$rootScope.$on('$viewContentLoaded', function() {
+			console.log('dali ulaza u state scange');
+		   document.body.scrollTop = document.documentElement.scrollTop = 0;
+		});
 
 
 		$scope.playingStation = {};
@@ -35,7 +38,6 @@ var app = angular
 					$scope.shouldPlay = false; 
 
 				}else{
-					console.log('treba da pocne');
 
 					$timeout(function() {
 						$scope.player.play();

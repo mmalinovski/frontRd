@@ -8,7 +8,11 @@
 		<!-- <a href="#" class="round-button"><i class="fa fa-heart-o" aria-hidden="true"></i></a> -->
 	</div>
 	<div class="columnButtons">
-		<button class="round-button" ng-click="playPausePlayer()"><i class="fa" data-ng:class="{'fa-play': !player.playing, 'fa-pause': player.playing  }" aria-hidden="true"></i></button>
+		<button class="round-button" ng-click="playPausePlayer()"><i class="fa" data-ng:class="{
+					'fa-play': !player.playing,
+					'fa-pause': player.playing,
+					'fa-spinner fa-pulse': !player.playing && shouldPlay,
+				  }" aria-hidden="true"></i></button>
 	</div>
 	<div class="columnButtons" data-ng:click="volumeSlider = !volumeSlider">
 		<a href="#" class="roundVolume"><i class="fa fa-volume-off" aria-hidden="true"></i></a>

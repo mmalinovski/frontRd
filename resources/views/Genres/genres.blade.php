@@ -41,7 +41,7 @@
 
 					<li semantic-meta execute="addStation(station)">
 
-						<a href="{{ route('station', ['slug' => $station->slug]) }}" class="glavno">
+						<a href="{{ route('station', ['slug' => $station->slug]) }}" class="glavno" semantic-slug="{{ $station->slug }}">
 							<img semantic-logo="src" src="{{ $station->logo }}" alt="{{$station->name}}">
 							<span class="currentTrack">
 								<span semantic-name class="stationName">{{$station->name }}</span>
@@ -61,9 +61,9 @@
 						</audio>
 						<button class="plej round-button" data-ng:click="setStation({{ $i }})"><i class="fa" 
 							data-ng:class="{
-								'fa-pause': player.playing && (currentStation.radioTitle == '{{ e($station->name) }}'),
-								'fa-spinner fa-pulse': !player.playing && (currentStation.radioTitle == '{{ e($station->name) }}') && shouldPlay,
-								'fa-play': (currentStation.radioTitle != '{{$station->name }}') || (!player.playing && (currentStation.radioTitle == '{{ e($station->name) }}') && !shouldPlay)
+								'fa-pause': player.playing && (currentStation.slug == '{{ $station->slug }}'),
+								'fa-spinner fa-pulse': !player.playing && (currentStation.slug == '{{ $station->slug }}') && shouldPlay,
+								'fa-play': (currentStation.slug != '{{$station->slug }}') || (!player.playing && (currentStation.slug == '{{ $station->slug }}') && !shouldPlay)
 							}"
 							aria-hidden="true"></i></button>
 					</li>
@@ -81,6 +81,8 @@
 
 
 
-
+<script>
+	$("main").animate({ scrollTop: 0 }, 0);
+</script>
 
 @endsection

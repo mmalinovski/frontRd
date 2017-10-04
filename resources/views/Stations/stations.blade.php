@@ -26,13 +26,13 @@
 
 					<button id="playButton" ng-click="setStation(0)" class="round-button floatL"><i class="fa" 
 						data-ng:class="{
-								'fa-pause': player.playing && (currentStation.radioTitle == '{{$station->name }}'),
-								'fa-spinner fa-pulse': !player.playing && (currentStation.radioTitle == '{{$station->name }}') && shouldPlay,
-								'fa-play': (currentStation.radioTitle != '{{$station->name }}') || (!player.playing && (currentStation.radioTitle == '{{$station->name }}') && !shouldPlay)
+								'fa-pause': player.playing && (currentStation.slug == '{{$station->slug }}'),
+								'fa-spinner fa-pulse': !player.playing && (currentStation.slug == '{{$station->slug }}') && shouldPlay,
+								'fa-play': (currentStation.slug != '{{$station->slug }}') || (!player.playing && (currentStation.slug == '{{$station->slug }}') && !shouldPlay)
 							}"
 						aria-hidden="true"></i></button>
 
-					<p semantic-name class="stationText">{{ $station->name }}</p>
+					<p semantic-name class="stationText" semantic-slug="{{ $station->slug }}">{{ $station->name }}</p>
 					<a href="#" class="addToFavorite"><i class="fa fa-heart-o" aria-hidden="true"><span> Add to favorites</span></i></a>
 					<div class="socialMediaButtonsForStations">
 						<a href="#" class="fa fa-facebook"></a>
@@ -61,6 +61,8 @@
 
 	
 	</main>
-
+	<script>
+		$("main").animate({ scrollTop: 0 }, 0);
+	</script>
 
 @endsection
