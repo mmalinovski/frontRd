@@ -30,10 +30,10 @@
 				<h1 class="">
 					{{ $genres->active->name }} Stations</h1>
 
-				<form id="searchbox" action="">
+				<!-- <form id="searchbox" action="">
 					<input id="search" type="text" placeholder="Search genres">
 					<input id="submit" type="submit" value="Search">
-				</form>
+				</form> -->
 				<ul id="genresContainer" class="flex_container">	
 					<?php $s = $stations->byGenre($genres->active->slug) ?>
 					<?php $i = 0 ?>

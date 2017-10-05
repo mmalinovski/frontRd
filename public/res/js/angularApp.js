@@ -8,24 +8,36 @@ var app = angular
 	'ui-rangeSlider',
 	'ngSanitize',
 	'ui.select',
+	'angular-google-analytics'
 ])
+.config(['AnalyticsProvider', function (AnalyticsProvider) {
+   // Add configuration code as desired
+   AnalyticsProvider.setAccount({
+   	tracker: 'UA-83841379-2',
+   	trackEvent: true
+   });
+   AnalyticsProvider.trackPages(true);
+   AnalyticsProvider.trackUrlParams(true);
+}]).run(['Analytics', function(Analytics) { }])
 
-.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$sessionStorage', '$timeout',
-	function($rootScope, $scope, $localStorage, $sessionStorage, $timeout) {
+.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$sessionStorage', '$timeout','$transitions',
+	function($rootScope, $scope, $localStorage, $sessionStorage, $timeout, $transitions) {
 
 		$scope.currentStation = {};
 		$scope.stations = [];
 		$scope.shouldPlay = false;
 
-		$rootScope.$on('$stateChangeEnd', 
-			function(event, toState, toParams, fromState, fromParams, options){ 
-				$scope.stations = [];
+		$transitions.onSuccess({},
+			function(){ 
+				// $scope.stations = [];
+				document.body.scrollTop = document.documentElement.scrollTop = 0;
+				 // $window.ga('send', 'pageview', $location.path());
 			}
 		);
-		$rootScope.$on('$viewContentLoaded', function() {
-			console.log('dali ulaza u state scange');
-		   document.body.scrollTop = document.documentElement.scrollTop = 0;
-		});
+		
+		// $rootScope.$on('$viewContentLoaded', function() {
+		// 	document.body.scrollTop = document.documentElement.scrollTop = 0;
+		// });
 
 
 		$scope.playingStation = {};
@@ -47,7 +59,6 @@ var app = angular
 				}
 			}
 			else {
-				console.log('treba da gi napravi isti');
 				$scope.playingStation = angular.copy($scope.currentStation);
 
 				$timeout(function() {
