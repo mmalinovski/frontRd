@@ -8,17 +8,22 @@ var app = angular
 	'ui-rangeSlider',
 	'ngSanitize',
 	'ui.select',
-	'angular-google-analytics'
-])
-.config(['AnalyticsProvider', function (AnalyticsProvider) {
-   // Add configuration code as desired
-   AnalyticsProvider.setAccount({
-   	tracker: 'UA-83841379-2',
-   	trackEvent: true
-   }).trackPages(true).logAllCalls(true).trackUrlParams(true);
-}]).run(['Analytics', function(Analytics) { }])
+]).run(run);
 
-.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$sessionStorage', '$timeout','$transitions',
+run.$inject = ['$rootScope', '$location', '$window', '$transitions',];
+    function run($rootScope, $location, $window, $transitions) {
+        // initialise google analytics
+        $window.ga('create', 'UA-83841379-2', 'auto');
+ 
+        // track pageview on state change
+        $transitions.onSuccess({},
+			function(){ 
+        $window.ga('send', 'pageview', $location.path());
+        	}
+		);
+    }
+
+app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$sessionStorage', '$timeout','$transitions',
 	function($rootScope, $scope, $localStorage, $sessionStorage, $timeout, $transitions) {
 
 		$scope.currentStation = {};

@@ -59,7 +59,7 @@
 						"Content@": {
 							templateUrl: function($stateParams) {
 								return "/stations/"+$stateParams.slug+'?ajax=true';
-							},
+							},		
 
 							// controller: ""
 						}
