@@ -15,9 +15,7 @@ var app = angular
    AnalyticsProvider.setAccount({
    	tracker: 'UA-83841379-2',
    	trackEvent: true
-   });
-   AnalyticsProvider.trackPages(true);
-   AnalyticsProvider.trackUrlParams(true);
+   }).trackPages(true).logAllCalls(true).trackUrlParams(true);
 }]).run(['Analytics', function(Analytics) { }])
 
 .controller('MainController', ['$rootScope', '$scope', '$localStorage', '$sessionStorage', '$timeout','$transitions',
@@ -31,7 +29,6 @@ var app = angular
 			function(){ 
 				// $scope.stations = [];
 				document.body.scrollTop = document.documentElement.scrollTop = 0;
-				 $window.ga('send', 'pageview', $location.path());
 			}
 		);
 		
