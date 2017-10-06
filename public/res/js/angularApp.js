@@ -31,7 +31,7 @@ var app = angular
 			function(){ 
 				// $scope.stations = [];
 				document.body.scrollTop = document.documentElement.scrollTop = 0;
-				 // $window.ga('send', 'pageview', $location.path());
+				 $window.ga('send', 'pageview', $location.path());
 			}
 		);
 		
