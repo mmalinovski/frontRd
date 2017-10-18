@@ -11,12 +11,12 @@
 
 
 			<!-- S E A R C H -->
-
-		<form class="search" action="" ng-controller="SearchController">
+		
+		<form class="search" method="GET" ng-controller="SearchController">
   			<div class="searchModule" ng-mouseleave="showResults = false">
-  				<input  type="text" placeholder="Search Radio Stations" ng-model="searchText" ng-click="showResults = true">
+  				<input  class="inputSearch" type="text" name="search" placeholder="Search Radio Stations" ng-model="searchText" ng-model-options="{debounce : 1000}" ng-click="showResults = true" autocomplete="off" ng-keyup="doSearch()">
 				<ul class="results" ng-show="showResults">
-					<li ng-repeat="station in listOfStations | filter: searchText | limitTo: 10 ">
+					<li ng-repeat="station in listOfStations">
 						<a href="/stations/@{{station.slug}}">@{{station.name}}</a>
 					</li>
 				</ul>

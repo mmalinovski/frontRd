@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body{
-    font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 a{
@@ -19,6 +19,13 @@ a{
 }
 
 #logo img {
+}
+
+@media only screen and (max-width: 800px) {
+	#logo img {
+		width: 120px;
+		height: 50px;
+	}
 }
 
 .squareTypeList{
@@ -39,6 +46,15 @@ a{
 	margin-bottom: 300px;
 
 }
+
+@media only screen and (max-width: 1070px) {
+	.staticWrapper{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+
 .staticWrapper p {
 	font-family: 'Open Sans', sans-serif;
 	padding: 5px;
@@ -75,12 +91,11 @@ header {
 	text-align: center;
 	position: fixed;
 	top: 0;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease;
-	overflow: hidden;
 	width: 100%;
 	position: fixed;
 	z-index: 1;
@@ -94,24 +109,90 @@ header nav {
   /*line-height: 60px;*/
   width: 100%;
   padding-top: 20px;
+  position: relative;
 }
 
-header nav li {
-  display: inline-block;
-  text-decoration: none;
+
+@media only screen and (min-width: 810px) {
+	
+	.navMenu li {
+		margin-top: 10px;
+		display: inline-block;
+		text-decoration: none;
+	}
+	.navMenu a {
+		color: black;
+		line-height: 1;
+		padding: 10px 40px;
+		font-family: 'Open Sans', sans-serif;
+		text-transform: uppercase;
+	}
+	.navMenu a:hover {
+		color: #426cab;
+	}
 }
 
-header nav a {
-	color: black;
-	line-height: 1;
-	padding: 10px 40px;
-	font-family: 'Open Sans', sans-serif;
-	text-transform: uppercase;
+@media only screen and (max-width: 809px) {
+
+	/*HAMBURGER MENU*/
+	.hamContainer {
+		display: inline-block;
+		cursor: pointer;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	.bar1, .bar2, .bar3 {
+		width: 35px;
+		height: 5px;
+		background-color: #333;
+		margin: 6px 0;
+		transition: 0.4s;
+	}
+	.change .bar1 {
+		-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+		transform: rotate(-45deg) translate(-9px, 6px) ;
+	}
+	.change .bar2 {opacity: 0;}
+
+	.change .bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+		transform: rotate(45deg) translate(-8px, -8px) ;
+	}
+	/*---------------------------------------------------------------*/
+
+	.navMenu li {
+		margin-top: 15px;
+		display: block;
+		text-decoration: none;
+	}
+	.navMenu a {
+		color: black;
+		line-height: 1;
+		font-family: 'Open Sans', sans-serif;
+		text-transform: uppercase;
+	}
+	.navMenu a:hover {
+		color: #426cab;
+	}
+	.navMenu {
+		width: 100px;
+		height: 160px;
+		background-color: #fff;
+		border: 1px solid #000;
+		z-index: 999;
+		position: absolute;
+		top: 60px;
+		right: 5px;
+	}
+	.hideHamburgerMenu {
+		visibility: hidden;
+	}
+
+
 }
 
-header nav a:hover {
-	color: #426cab;
-}
+
 
 header h1 {
   font-size: 30px;
@@ -299,30 +380,30 @@ body.sticky-header header h1  {
 }
 
 @media only screen and (max-width: 500px) {
-    .columnImagePlaying img {
-        display: none;
-    }
+	.columnImagePlaying img {
+		display: none;
+	}
 }
 @media only screen and (max-width: 500px) {
-    #listBtn {
-        display: none;
-    }
+	#listBtn {
+		display: none;
+	}
 }
 @media only screen and (max-width: 500px) {
-    #detachedBtn {
-        display: none;
-    }
+	#detachedBtn {
+		display: none;
+	}
 }
 @media only screen and (max-width: 500px) {
-    #track {
-        display: inline;
-    }
+	#track {
+		display: inline;
+	}
 }
 
 @media only screen and (max-width: 500px) {
-    #genreSection aside {
-    	display: none;
-    }
+	#genreSection aside {
+		display: none;
+	}
 }
 
 .parallax {
@@ -436,6 +517,8 @@ body.sticky-header header h1  {
 	}*/
 
 
+
+
 .header {
   display: flex;
   align-items: center;
@@ -487,7 +570,7 @@ input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    outline: none;
+	outline: none;
 }
 #searchbox
 {
@@ -503,6 +586,11 @@ button:focus {
 #search, 
 #submit {
 	float: left;
+}
+@media only screen and (max-width: 800px) {
+   .inputSearch {
+   		width: 250px !important;
+   }
 }
 
 #search {

@@ -29,6 +29,8 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 		$scope.currentStation = {};
 		$scope.stations = [];
 		$scope.shouldPlay = false;
+		$scope.showHamMenuVar = false;
+		$scope.hideHamburger = true;
 
 		$transitions.onSuccess({},
 			function(){ 
@@ -86,6 +88,14 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 			$scope.stations.push(station);
 		}
 
+		$scope.showHamMenu = function() {
+			$scope.showHamMenuVar =!$scope.showHamMenuVar;
+			$scope.hideHamburger = !$scope.hideHamburger;
+
+		}
+
+
+
 		$scope.loading = false;
 		$scope.playing = false;
 		$scope.volumeSlider = false;
@@ -103,14 +113,28 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 		
 	}
 
-]).controller('SearchController', ['$scope', '$http',
-	function ($scope, $http) {
-		$http.get("/listOfStations")
-			.then(function(response) {
-				$scope.listOfStations = response.data;
-  			});		
+]).controller('SearchController', ['$rootScope', '$scope', '$http',
+	function ($rootScope, $scope, $http) {
+		// $http.get("/listOfStations")
+		// 	.then(function(response) {
+		// 		$scope.listOfStations = response.data;
+  // 			});		
 
   			$scope.showResults = false;	
+  			$scope.searchText = '';
+  			$scope.searchGenre = '';
+
+  			$scope.doSearch = function() {
+				$http.get('/search?search=' + $scope.searchText).then(function(response){
+				$scope.listOfStations = response.data;
+				});
+			}
+
+			$scope.doGenresSearch = function() {
+				$http.get('/searchGenre?search=' + $scope.searchGenre).then(function(response){
+					$scope.listOfGenres = response.data;
+				})
+			}
     }
 ]);
 

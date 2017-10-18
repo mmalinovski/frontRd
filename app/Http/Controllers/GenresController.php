@@ -36,6 +36,23 @@ class GenresController extends LnController
     }
 
 
+
+    public function SearchGenres(Request $request) {
+
+         // \DB::connection()->enableQueryLog();
+
+        $query = Genre::where('name', 'like', '%' . $request->search . '%')->limit(10)->get();
+
+        // $queries = \DB::getQueryLog();
+
+        return $query;
+
+
+        // return dd($queries);
+    }
+
+
+
     public function genre($slug) {
 
         // \DB::connection()->enableQueryLog();

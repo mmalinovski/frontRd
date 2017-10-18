@@ -2,7 +2,64 @@
     position: relative;
     padding: 50px;
 }
-.searchModule input {
+
+.searchDiv {
+    position: relative;
+    /*padding: 50px;*/
+}
+
+.noPadding {
+    padding: 0 !important;
+}
+.displayInline {
+    display: inline-block;
+}
+
+.floatRight {
+    float: right !important;
+}
+.floatLeft {
+    float: left !important;
+}
+.clearfix {
+    clear: both !important;
+}
+
+.searchGenres {
+    float: right !important;
+    margin-top: -77px;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 800px){
+    .searchDiv input {
+        width: 200px !important;
+    }
+}
+.searchDiv input {
+    width: 250px;
+    height: 27px;
+    border: 1px solid #a7aabc;
+    border-radius: 6px;
+    padding-left: 15px;
+}
+
+
+.searchDiv ul {
+    position: absolute;
+    top: 31px;
+    left: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    z-index: 999999;
+    width: 80%;
+}
+.searchDiv li a {
+    display: block;
+    width: 100%;
+
+}
+.searchModule input  {
     width: 400px;
     height: 27px;
     border: 1px solid #a7aabc;
@@ -28,11 +85,16 @@
 .searchModule ul a:link, .searchModule ul a:visited {
     color: #404040; 
 }
+.searchDiv ul a:link, .searchDiv ul a:visited {
+    color: #404040; 
+}
 .searchModule ul a:hover {
     background-color: #404040; color: #FFF; 
 }
-
-.searchModule ul li {
+.searchDiv ul a:hover {
+    background-color: #404040; color: #FFF; 
+}
+.searchModule ul li , .searchDiv ul li {
     padding: 3px 0; 
 }
 

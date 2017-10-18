@@ -10,7 +10,6 @@ app.directive('semanticMeta', function($compile, $rootScope, $timeout){
 
 				var semanticSlug = element.find('[semantic-slug]')[0];
 				radioMeta.slug = semanticSlug.getAttribute('semantic-slug');
-				// console.log(semanticSlug);
 
 			radioMeta.radioTitle = element.find('[semantic-name]').text();
 

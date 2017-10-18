@@ -9,10 +9,21 @@
 		<!-- G e n r e s -->
 
 			<section class="wrapper">
-				<h1 class="headerStyle">Genres</h1>
+				<h1 class="headerStyle" >Genres</h1>
 
+					<!-- SEARCH GENRES -->
+				<form class="searchGenres" method="GET" ng-controller="SearchController">
+  					<div class="searchDiv" ng-mouseleave="showResults = false">
+	  					<input type="text" name="search" placeholder="Search Genres" ng-model="searchGenre" ng-model-options="{debounce : 1000}" ng-click="showResults = true" autocomplete="off" ng-keyup="doGenresSearch()">
+						<ul ng-show="showResults">
+							<li ng-repeat="genres in listOfGenres">
+								<a href="/genres/@{{genres.slug}}">@{{genres.name}}</a>
+							</li>
+						</ul>
+  					</div>
+				</form>
 
-				<ul class="flex_container">
+				<ul class="flex_container clearfix">
 					@foreach($genres as $genre)
 						<li>
 							<a href="{{route('genre', ['slug' => $genre->slug])}}" class="forGenre">{{$genre->name}}</a>

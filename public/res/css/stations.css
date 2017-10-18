@@ -24,6 +24,34 @@
 	position: relative;
 }
 
+@media only screen and (max-width: 650px) {
+	#stationColumn1 {
+		/*display: flex;
+		flex-direction: row;*/
+		/*flex-wrap: wrap;*/
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	#stationColumn1 img {
+		width: 200px !important;
+		height: 200px !important;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	#radioStation {
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	#stationColumn2 {
+		align-items: center;
+	}
+}
+
+
 #stationColumn1 img {
 	border-radius: 50px;
 	width: 300px;
@@ -32,13 +60,19 @@
 
 #stationColumn2 {
 	margin-left: 15px;
-	align-self: flex-start;
+	/*align-self: flex-start;*/
 	width: 100%;
 }
 
 .socialMediaButtonsForStations {
 	margin-left: 10px;
 	margin-top: 40px;
+}
+
+@media only screen and (max-width: 650px) {
+	.socialMediaButtonsForStations {
+		text-align: center;
+	}
 }
 
 .socialMediaButtonsForStations .fa {
@@ -68,6 +102,12 @@
 .mobileApps {
 	margin-top: 80px;
 }
+@media only screen and (max-width: 650px) {
+	.mobileApps {
+		text-align: center;
+	}
+}
+
 
 #aboutStation span  {
 	font-size: 24px;
@@ -92,6 +132,13 @@
 #aboutStation {
 	margin-top: 50px;
 }
+@media only screen and (max-width: 650px) {
+	#aboutStation {
+		text-align: center;
+	}
+
+}
+
 
 #similarStations a {
 	padding: 5px;

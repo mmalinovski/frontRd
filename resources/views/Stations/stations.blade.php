@@ -5,7 +5,8 @@
 <main data-ng:init="resetStations()">
 	<section class="wrapper" execute="addStation(station)" semantic-meta>
 		<h1 class="headerStyle">
-		{{ $station->name }} Radio</h1>
+			{{ $station->name }} Radio
+		</h1>
 		<div id="radioStation">
 			<div id="stationColumn1">
 				<a href="#" class="round-button favoriteHeart"><i class="fa fa-heart" aria-hidden="true"></i></a>
@@ -33,7 +34,7 @@
 						aria-hidden="true"></i></button>
 
 					<p semantic-name class="stationText" semantic-slug="{{ $station->slug }}">{{ $station->name }}</p>
-					<a href="#" class="addToFavorite"><i class="fa fa-heart-o" aria-hidden="true"><span> Add to favorites</span></i></a>
+					<!-- <a href="#" class="addToFavorite"><i class="fa fa-heart-o" aria-hidden="true"><span> Add to favorites</span></i></a> -->
 					<div class="socialMediaButtonsForStations">
 						<a href="#" class="fa fa-facebook"></a>
 						<a href="#" class="fa fa-twitter"></a>

@@ -53,6 +53,24 @@
 						}
 					}
 				})
+				.state("terms-and-conditions", {
+					url: "/terms-and-conditions.html",
+					views: {
+						"Content@": {
+							templateUrl: "/terms-and-conditions.html?ajax=true",
+							// controller: ""
+						}
+					}
+				})
+				.state("privacy-policy", {
+					url: "/privacy-policy.html",
+					views: {
+						"Content@": {
+							templateUrl: "/privacy-policy.html?ajax=true",
+							// controller: ""
+						}
+					}
+				})
 				.state("station", {
 					url: "/stations/:slug",
 					views: {

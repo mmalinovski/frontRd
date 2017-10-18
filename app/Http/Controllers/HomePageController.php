@@ -13,37 +13,51 @@ use Illuminate\Support\Facades\Storage;
 
 class HomePageController extends LnController
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct(Request $request)
-    {
-         parent::__construct($request);
-    }
+	/**
+	 * Create a new controller instance.
+	 *
+	 * @return void
+	 */
+	public function __construct(Request $request)
+	{
+		 parent::__construct($request);
+	}
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $genres = Genre::simplePaginate(20);
+	/**
+	 * Show the application dashboard.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function index()
+	{
+		$genres = Genre::simplePaginate(20);
 
-        $randomStations = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(10)->get();
-        $randomStationsEditor = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(7)->get();
-        $randomStationsPopular = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(10)->get();
-
-
-        return view('home.homePage')->with('genres', $genres)->with('randomStations', $randomStations)->with('randomStationsEditor', $randomStationsEditor)->with('randomStationsPopular', $randomStationsPopular);
-    }
+		$randomStations = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(10)->get();
+		$randomStationsEditor = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(7)->get();
+		$randomStationsPopular = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(10)->get();
 
 
-    public function ListOfStations() {
-        $stationsList = Station::all();
-        return $stationsList;
+		return view('home.homePage')->with('genres', $genres)->with('randomStations', $randomStations)->with('randomStationsEditor', $randomStationsEditor)->with('randomStationsPopular', $randomStationsPopular);
+	}
 
-    }
+
+	// public function ListOfStations() {
+	// 	$stationsList = Station::all();
+	// 	return $stationsList;
+
+	// }
+
+	public function SearchStation(Request $request) {
+
+		 // \DB::connection()->enableQueryLog();
+
+		$query = Station::where('name', 'like', '%' . $request->search . '%')->limit(10)->get();
+
+		// $queries = \DB::getQueryLog();
+
+		return $query;
+
+
+        // return dd($queries);
+	}
 }
