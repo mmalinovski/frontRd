@@ -1,0 +1,292 @@
+.playPause {
+    display: block;
+}
+
+
+#artwork{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+#player {
+	overflow: hidden;
+	background-color: #111;
+	color: #fff;
+	font-size: 2em;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	position: absolute;
+	z-index: 1000;
+	left: 50%;
+	top: 50px;
+
+	text-align: center;
+}
+
+#player a {
+	color: #777;
+}
+#player a:hover {
+	color: #aaa;
+}
+#player a.active {
+	color: #fff;
+}
+
+#player h2{
+	overflow: hidden;
+	margin: 0 0 10px;
+}
+
+#player.stick {
+	margin-top: 0 !important;
+	text-align: center;
+	position: fixed;
+	top: 10px;
+	z-index: 10000;
+}
+
+#player.stick h2{
+	font-size: 1em;
+}
+
+#player.stick img{
+	display: none;
+}
+
+#player.stick .fa-play-circle-o{
+	color: #777;
+
+}
+
+#player.stick h3{
+	display: none;
+}
+
+#player.stick #streams{
+	display: none;
+}
+
+
+.ad{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+#streams{
+	font-family: 'Cutive Mono', monospace;
+	font-size: 12px;
+	float: left;
+	overflow: hidden;
+	text-transform: uppercase;
+	margin: 15px 0;
+}
+
+#streams li{
+	float: left;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+#streams li a{
+	display: block;
+	float: left;
+	padding: 2px;
+	color: #777;
+	border: 1px solid #777;
+	border-radius: 3px;
+}
+
+#streams li a:hover{
+	border-color: #999;
+	color: #999;
+}
+
+#streams li a.active{
+	border-color: #fff;
+	color: #fff;
+}
+
+#controls{
+	overflow: hidden;
+}
+
+#controls h3{
+	margin: 0 0 10px;
+	overflow: hidden;
+	color: #fff;
+	font-size: 0.7em;
+	padding: 0;
+	font-weight: 100;
+}
+
+#player button {
+	/*background-color: #ccc;*/
+	border: none;
+	border-radius: 50%;
+}
+
+#player .control {
+	float: left;
+}
+
+#player .control button {
+	width: 75px;
+	height: 75px;
+	cursor: pointer;
+	vertical-align: bottom;
+	display: inline-block;
+	position: relative;
+}
+
+#player .control .play {
+	background: url("../img/player/webradio.sprite.png") no-repeat -1px -210px;
+	
+	display: none;
+	
+}
+#player .control .play:hover {
+    background-position: -83px -210px
+}
+#player .control .stop {
+    background: url("../img/player/webradio.sprite.png") no-repeat -165px -210px;
+}
+#player .control .stop:hover {
+    background-position: -247px -210px
+}
+#player .control .stop .spinner {
+    display: block;
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("../img/player/webradio.sprite.png") no-repeat -330px -210px;
+    -webkit-animation: playspin 3s infinite linear;
+    -moz-animation: playspin 3s infinite linear;
+    -o-animation: playspin 3s infinite linear;
+    -ms-animation: playspin 3s infinite linear;
+    animation: playspin 3s infinite linear
+}
+
+#playtime {
+	font-family: 'Cutive Mono', monospace;
+	font-weight: bold;
+	font-size: 10pt;
+	position: absolute;
+	right: 5px;
+	top: 64px;
+	text-align: right;
+}
+#player .volume {
+    height: 20px;
+	position: absolute;
+	left: 80px;
+	top: 60px;
+	right: 60px;
+}
+#player .volume .mute {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    /*background: url("../img/player/webradio.sprite.png") no-repeat -81px 0;*/
+    float: left;
+    color: #ccc;
+}
+#player .volume .mute:hover {
+	color: #fff;
+}
+
+#player .volume .mute.on {
+    background-position: -236px 0;
+}
+#player .volume .mute.off {
+    background-position: -81px 0;
+}
+
+#player .volume .bar {
+    display: inline-block;
+    width: 280px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    margin-left: 8px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1), 1px 1px 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1), 1px 1px 2px rgba(0, 0, 0, 0.1)
+}
+#player .volume .bar .vol {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.52);
+    overflow: visible;
+    border-radius: 3px
+}
+#player .volume .bar a {
+    display: block;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background: transparent url("../img/player/webradio.sprite.png") no-repeat -160px 0;
+    z-index: 98;
+    margin-top: -15px;
+    margin-left: -11.5px
+}
+#player .volume .bar a div {
+    width: 23px;
+    height: 23px
+}
+#player .volume .bar a:hover {
+    background-position: -183px 0;
+    background-color: transparent
+}
+@-webkit-keyframes playspin {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+@-moz-keyframes playspin {
+    0% {
+        -moz-transform: rotate(0deg)
+    }
+    100% {
+        -moz-transform: rotate(360deg)
+    }
+}
+@-o-keyframes playspin {
+    0% {
+        -o-transform: rotate(0deg)
+    }
+    100% {
+        -o-transform: rotate(360deg)
+    }
+}
+@-ms-keyframes playspin {
+    0% {
+        -ms-transform: rotate(0deg)
+    }
+    100% {
+        -ms-transform: rotate(360deg)
+    }
+}
+@-keyframes playspin {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}

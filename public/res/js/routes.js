@@ -83,6 +83,18 @@
 						}
 					}
 				})
+				.state("detached", {
+					url: "/stations/:slug.html",
+					// views: {
+					// 	"Content@": {
+					// 		templateUrl: function($stateParams) {
+					// 			return "/stations/"+$stateParams.slug+'?ajax=true';
+					// 		},		
+
+					// 		// controller: ""
+					// 	}
+					// }
+				})
 		}
 	])
 

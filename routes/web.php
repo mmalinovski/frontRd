@@ -22,6 +22,7 @@ Route::get('/searchGenre', 'GenresController@SearchGenres');
 Route::get('/genres', 'GenresController@index')->name('genres');
 Route::get('/genres/{slug}', 'GenresController@genre')->name('genre');
 Route::get('/stations', 'StationsController@index')->name('stations');
+Route::get('/stations/{slug}.html', 'DetachedController@index')->name('detached');
 Route::get('/stations/{slug}', 'StationsController@station')->name('station');
 
 

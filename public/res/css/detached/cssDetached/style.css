@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:100,400');
+@import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+
+body{
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+header{
+	background-color: #111;
+	overflow: hidden;
+	width: 100%;
+	padding: 10px;
+	position: fixed;
+	z-index: 1;
+}
+
+header h1 {
+	color: #fff;
+	text-align: left;
+	overflow: hidden;
+	float: left;
+}
+
+#logo{
+	float: left;
+}
+
+#changeStation{
+	color: #fff;
+	float: right;
+	margin-right: 30px;
+}
+/*main{
+	width: 100%;
+	overflow: hidden;
+	clear: both;
+	background-color: #33a;
+	padding-top: 115px;
+}
+
+main p{
+	color: #fff;
+	margin:0 !important;
+	padding: 0 !important;
+}*/
+
+
+#media{
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	position: relative;
+	height: 300px;
+}
+/*
+.fa-play-circle-o {
+	font-size: 80px;
+	color: #777;
+}*/
+
+
+
+#containter{
+	margin: 0 5%;
+	overflow: hidden;
+}
+
+
+aside{
+	width: 33%;
+	overflow: hidden;
+	float: left;
+}
+
+.row{
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: row; 
+}
+.column {
+	display: block;
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	-ms-flex-negative: 1;
+	flex-shrink: 1;
+	padding: 0.75rem;
+}
+
+.column33{
+	width: 33%;
+	float: left;
+	overflow: hidden;
+}
+
+.column66{
+	width: 66%;
+	float: left;
+	overflow: hidden;
+}
+.column99{
+	width: 99%;
+	float: left;
+	overflow: hidden;
+}
+
+.moreStations {
+	/*display: inline-block;*/
+	background: #34495E;
+/*	float: right;
+*/	outline: none;
+	/*margin-right: 80px;*/
+	margin-top: -1px;
+	margin-bottom: 10px;
+	border: none;
+	text-decoration: none;
+	font-weight: 700;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 7px 40px;
+
+}
+.moreStations:hover {
+	background: #17202A;
+}
+.moreStations:active {
+	border: none;
+	background-color: #17202A;
+	box-shadow: 0 2px #17202A;
+	transform: translateY(1px);
+}
+
+#lastplayed{
+	text-align: center;
+	overflow: hidden;
+	padding: 0 2%;
+	margin-bottom: 30px;
+}
+
+
+#lastplayed li {
+	width: 20%;
+	float: left;
+	overflow: hidden;
+	padding: 0 0 1% 0;
+}
+#lastplayed h1{
+	text-align: left;
+	margin: 1.1% 2%;
+}
+
+#lastplayed img{
+	border: 1px solid #ddd;
+}

@@ -69,6 +69,7 @@
         <script src="{{ asset('/res/js/angularApp.js') }}"></script>
         <script src="{{ asset('/res/js/routes.js') }}"></script>
         <script src="{{ asset('/res/global/directives/semanticMeta.js') }}"></script>
+        <script src="{{ asset('/res/global/directives/targetBlank.js') }}"></script>
         <script src="{{ asset('/res/global/directives/mediaPlayer.js') }}"></script>
         <script src="{{ asset('/res/global/modules/ngStorage.js') }}"></script>
         <script src="{{ asset('/res/global/directives/rangeSlider.js') }}"></script>

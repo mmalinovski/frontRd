@@ -32,6 +32,6 @@
 		<button class="round-button"><i class="fa fa-th-list" aria-hidden="true"></i></button>
 	</div>
 	<div class="columnButtons" id="detachedBtn">
-		<a href="#" class="roundVolume"><i class="fa fa-window-restore" aria-hidden="true"></i></a>
+		<a target="lnPlayer" ui-sref="detached({slug: currentStation.slug})" ng-click="playPausePlayer()" class="roundVolume"><i class="fa fa-window-restore" aria-hidden="true"></i></a>
 	</div>
 </div>
