@@ -7,7 +7,7 @@
   event: http://purl.org/NET/c4dm/event.owl#
   foaf: http://xmlns.com/foaf/0.1/
   rdfs: http://www.w3.org/2000/01/rdf-schema#"
->
+data-ng:controller="MainController" ng-app="radioApp" ng-cloak>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,21 +36,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-</script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    </script>
 
-        <title>Player</title>
+        <title>
+            {{ isset($station) ? $station->name : 'NextTuner' }}
+        </title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     </head>
-    <body data-ng:controller="MainController" ng-app="radioApp" ng-cloak>
+    <body>
 
         @include('header')
         <section ui-view="Content">
@@ -69,6 +71,7 @@
         <script src="{{ asset('/res/js/angularApp.js') }}"></script>
         <script src="{{ asset('/res/js/routes.js') }}"></script>
         <script src="{{ asset('/res/global/directives/semanticMeta.js') }}"></script>
+        <script src="{{ asset('/res/global/directives/pageTitle.js') }}"></script>
         <script src="{{ asset('/res/global/directives/targetBlank.js') }}"></script>
         <script src="{{ asset('/res/global/directives/mediaPlayer.js') }}"></script>
         <script src="{{ asset('/res/global/modules/ngStorage.js') }}"></script>

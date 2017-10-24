@@ -20,6 +20,15 @@
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+	<script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    </script>
+
 </head>
 <body ng-app="detached" data-ng:controller="detachedController">
  <div class="page-bg">
@@ -65,7 +74,7 @@
 		</div>
 		<div class="flex_container">
 			<div class="columnButtons">
-				<a href="#" class="roundVolume"><i class="fa fa-volume-down" aria-hidden="true"></i></a>
+				<a href="#" class="roundVolume" ng-click="volume.max = volume.max - 10"><i class="fa fa-volume-down" aria-hidden="true"></i></a>
 			</div>
 			<!-- <div class="columnItem">
 				<div id="progress">
@@ -77,7 +86,7 @@
 			</div>
 
 			<div class="columnButtons">
-				<a href="#" class="roundVolume"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
+				<a href="#" class="roundVolume" ng-click="volume.max = volume.max + 10"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
 			</div>
 		</div>
 		<div class="flex_container">

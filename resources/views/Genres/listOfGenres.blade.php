@@ -5,11 +5,11 @@
 
 
 
-	<main>
+	<main page-title>
 		<!-- G e n r e s -->
 
 			<section class="wrapper">
-				<h1 class="headerStyle" >Genres</h1>
+				<h1 titlePage class="headerStyle" >Genres</h1>
 
 					<!-- SEARCH GENRES -->
 				<form class="searchGenres" method="GET" ng-controller="SearchController">

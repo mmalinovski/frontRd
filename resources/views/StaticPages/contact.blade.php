@@ -2,7 +2,8 @@
 
 @section('content')
 
-<main>
+<main pageTitle>
+	<h1 ng-hide="true" titlePage>Contact Page</h1>
 	<section class="staticWrapper">
 		<p><b>Welcome to Internte Radio!</b> If you have questions, feedback or suggestions on the service of LiveNetworks or on cooperations, please feel free to contact us on this e-mail: 
 			<!--Place the code below where you want the link to be displayed-->

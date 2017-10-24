@@ -32,6 +32,10 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 		$scope.showHamMenuVar = false;
 		$scope.hideHamburger = true;
 
+		$scope.title = '';
+
+
+
 		$transitions.onSuccess({},
 			function(){ 
 				// $scope.stations = [];
@@ -110,7 +114,9 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 			$localStorage.volume = $scope.volume.max;
 		})
 
-		
+		$scope.$watch('title', function() {
+			
+		})
 	}
 
 ]).controller('SearchController', ['$rootScope', '$scope', '$http',

@@ -2,9 +2,9 @@
 
 @section('content')
 
-<main data-ng:init="resetStations()">
+<main data-ng:init="resetStations()"  page-title>
 	<section class="wrapper" execute="addStation(station)" semantic-meta>
-		<h1 class="headerStyle">
+		<h1 class="headerStyle" titlePage>
 			{{ $station->name }} Radio
 		</h1>
 		<div id="radioStation">

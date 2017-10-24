@@ -4,12 +4,12 @@
 
 
 
-<main data-ng:init="resetStations()">
+<main data-ng:init="resetStations()" page-title>
 
 	<section id="genreSection">
 
 		<aside>
-			<h1>Genres</h1>
+			<h1 titlePage>Genres</h1>
 			
 			<ul>
 				@foreach ($genres->all() as $g) 

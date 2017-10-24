@@ -2,11 +2,11 @@
 
 @section('content')
 
-<main>
+<main page-title>
 
 	<section class="header">
 		<div class="nadHeder">
-				<h1>Wellcome to Internet Radio</h1>
+				<h1 titlePage>Wellcome to Next Tuner</h1>
 			</div>
 
 
