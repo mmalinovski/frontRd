@@ -36,8 +36,10 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 
 
 
-		$transitions.onSuccess({},
-			function($transitions){ 
+		$transitions.onSuccess({
+			 to: 'caseStudy'
+		},
+			function($state, $transitions){ 
 				// $scope.stations = [];
 				document.body.scrollTop = document.documentElement.scrollTop = 0;
 			}
