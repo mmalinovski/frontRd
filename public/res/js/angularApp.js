@@ -10,7 +10,7 @@ var app = angular
 	'ui.select',
 ]).run(run);
 
-run.$inject = ['$rootScope', '$location', '$window', '$transitions',];
+run.$inject = ['$rootScope', '$location', '$window', '$transitions'];
     function run($rootScope, $location, $window, $transitions) {
         // initialise google analytics
         $window.ga('create', 'UA-83841379-2', 'auto');
