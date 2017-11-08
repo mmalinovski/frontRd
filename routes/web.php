@@ -25,6 +25,10 @@ Route::get('/stations', 'StationsController@index')->name('stations');
 Route::get('/stations/{slug}.html', 'DetachedController@index')->name('detached');
 Route::get('/stations/{slug}', 'StationsController@station')->name('station');
 
+Route::post('sendmail','MailController@basic_email');
+// Route::get('sendhtmlemail','MailController@html_email');
+// Route::get('sendattachmentemail','MailController@attachment_email');
+
 
 
 Route::get('/{url}.html', 'StaticPagesController@index')->name('staticPage');

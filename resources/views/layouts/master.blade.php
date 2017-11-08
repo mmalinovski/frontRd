@@ -25,7 +25,8 @@ data-ng:controller="MainController" ng-app="radioApp" ng-cloak>
                 "/res/css/stations.css",
                 "/res/css/search.css",
                 "/res/css/slider.css",
-                "/res/css/uiSelect.css"
+                "/res/css/uiSelect.css",
+                "/res/css/aboutForm.css"
 
             ])
         !!}

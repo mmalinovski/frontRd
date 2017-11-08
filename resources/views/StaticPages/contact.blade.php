@@ -3,15 +3,24 @@
 @section('content')
 
 <main pageTitle>
-	<h1 ng-hide="true" titlePage>Contact Page</h1>
-	<section class="staticWrapper">
-		<p><b>Welcome to Internte Radio!</b> If you have questions, feedback or suggestions on the service of LiveNetworks or on cooperations, please feel free to contact us on this e-mail: 
-			<!--Place the code below where you want the link to be displayed-->
-<span id="obf"><script>document.getElementById("obf").innerHTML="<n uers=\"znvygb:pbagnpg@vagreargenqvb.pbz\" gnetrg=\"_oynax\">fraq r-znvy</n>".replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});document.body.appendChild(eo);</script>
-<noscript><span style="unicode-bidi:bidi-override;direction:rtl;">moc.oidartenretni@tcatnoc</span></noscript></span>
-			
-		</p>
-	</section>
+	<!-- <h1 ng-hide="true" titlePage>Contact Page</h1> -->
+	
+		<h1 class="headerStyle" titlePage>Contact Page</h1>
+
+		<form method="post" name="emailForm" action="sendmail" id="contactForm">
+			{{ csrf_field() }}
+			<div class="textEmail">
+				<input type="text" name="name" placeholder="Full Name">
+				<input type="text" name="email" placeholder="E-mail">
+			</div>
+			<div class="messageForm">
+				<!-- <input type="text" name="" placeholder="Your Message"> -->
+				<textarea name="message" placeholder=" Your Message..."></textarea>
+			</div>
+			<div class="g-recaptcha center-text" data-sitekey="6LfNfzYUAAAAAHx2aqRaesQschAPBUiChnZhFnU_" ></div>
+			<input class="moreStations" type="submit" value="Send" name="submit">
+
+		</form>
 </main>
 
 @endsection

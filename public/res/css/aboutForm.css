@@ -1,0 +1,39 @@
+/*C O N T A C T    F O R M*/
+
+
+#contactForm {
+	width: 50%;
+	margin: auto;
+}
+
+#contactForm input[type=text]{
+	border: 0;
+	border: 1px solid #e8e8e9;
+	border-radius: 0;
+	box-shadow: none;
+	color: #333;
+	/*float: left;*/
+	height: 44px;
+	margin-bottom: 30px;
+	width: 330px;
+	padding-left: 10px;
+}
+
+.messageForm {
+	display: block;
+}
+.textEmail input{
+	display: inline-block;
+}
+
+.messageForm textarea {
+	width: 686px !important;
+	height: 200px !important;
+	border: 0;
+	border: 1px solid #e8e8e9;
+	border-radius: 0;
+	box-shadow: none;
+	color: #333;
+	resize: none;
+	margin-bottom: 30px;
+}
