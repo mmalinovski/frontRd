@@ -18,6 +18,11 @@ Route::get('/', function () {
 
 Route::get('/', 'HomePageController@index')->name('homePage');
 Route::get('/search', 'HomePageController@SearchStation');
+
+Route::get('/api/listOfStations', 'MobileApiController@ListOfStations');
+Route::get('/api/listOfGenres', 'MobileApiController@ListOfGenres');
+
+
 Route::get('/searchGenre', 'GenresController@SearchGenres');
 Route::get('/genres', 'GenresController@index')->name('genres');
 Route::get('/genres/{slug}', 'GenresController@genre')->name('genre');
