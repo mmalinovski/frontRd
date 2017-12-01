@@ -35,3 +35,19 @@
 		<a target="lnPlayer" ui-sref="detached({slug: currentStation.slug})" ng-click="playPausePlayer()" class="roundVolume"><i class="fa fa-window-restore" aria-hidden="true"></i></a>
 	</div>
 </div>
+
+<script type="text/javascript">
+	
+
+		document.getElementById('audioPlayer').addEventListener("ended",function() {
+			console.log(this.src);
+		});
+
+
+		setTimeout(function() {
+			console.log(document.getElementById('audioPlayer'));
+			
+		}, 500);
+
+
+</script>

@@ -14,7 +14,7 @@
 					<!-- SEARCH GENRES -->
 				<form class="searchGenres" method="GET" ng-controller="SearchController">
   					<div class="searchDiv" ng-mouseleave="showResults = false">
-	  					<input type="text" name="search" placeholder="Search Genres" ng-model="searchGenre" ng-model-options="{debounce : 1000}" ng-click="showResults = true" autocomplete="off" ng-keyup="doGenresSearch()">
+	  					<input type="text" name="search" placeholder="Search Genres" ng-model="searchGenre"  ng-click="showResults = true" autocomplete="off" ng-keyup="doGenresSearch()">
 						<ul ng-show="showResults">
 							<li ng-repeat="genres in listOfGenres">
 								<a href="/genres/@{{genres.slug}}">@{{genres.name}}</a>

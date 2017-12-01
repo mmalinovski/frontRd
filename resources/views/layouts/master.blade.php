@@ -69,6 +69,17 @@ data-ng:controller="MainController" ng-app="radioApp" ng-cloak>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js">
         </script>
+
+
+        {!!
+            Minify::javascript([
+                "/res/js/angular_v_1_6_5.js",
+                "/res/js/angular_ui_router_v_1_0_3.js",
+                "/res/js/sanitize.js"
+            ])
+        !!}
+
+
         <script src="{{ asset('/res/js/angularApp.js') }}"></script>
         <script src="{{ asset('/res/js/routes.js') }}"></script>
         <script src="{{ asset('/res/global/directives/semanticMeta.js') }}"></script>

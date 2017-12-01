@@ -49,6 +49,17 @@
 						</a>
 					</div>
 			</div>
+			<div class="addPlace">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- adNextuner 2 -->
+				<ins class="adsbygoogle"
+				     style="display:inline-block;width:300px;height:250px"
+				     data-ad-client="ca-pub-5401857225374045"
+				     data-ad-slot="1183610165"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
 		</div>
 		
 	</section>

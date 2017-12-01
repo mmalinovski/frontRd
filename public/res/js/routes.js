@@ -23,6 +23,18 @@
 						}
 					}
 				})
+				.state("genres.paginate", {
+					url: "?page=:pagValue",
+					views: {
+						"Content@": {
+							templateUrl: function($stateParams) {
+								console.log($stateParams);
+								return "/genres?page="+$stateParams.page+'&ajax=true';
+							}
+							// controller: ""
+						}
+					}
+				})
 				.state("genres.stationsList", {
 					url: "/:slug",
 					views: {

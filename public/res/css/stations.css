@@ -51,6 +51,14 @@
 	}
 }
 
+.addPlace {
+	width: 300px;
+	height: 250px;
+	margin: auto;
+
+
+}
+
 
 #stationColumn1 img {
 	border-radius: 50px;
@@ -61,7 +69,7 @@
 #stationColumn2 {
 	margin-left: 15px;
 	/*align-self: flex-start;*/
-	width: 100%;
+	flex: auto;
 }
 
 .socialMediaButtonsForStations {

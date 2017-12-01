@@ -23,8 +23,8 @@ run.$inject = ['$rootScope', '$location', '$window', '$transitions'];
 		);
     }
 
-app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$sessionStorage', '$timeout','$transitions',
-	function($rootScope, $scope, $localStorage, $sessionStorage, $timeout, $transitions) {
+app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$sessionStorage', '$timeout','$transitions', '$state',
+	function($rootScope, $scope, $localStorage, $sessionStorage, $timeout, $transitions, $state) {
 
 		$scope.currentStation = {};
 		$scope.stations = [];
@@ -98,7 +98,18 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 
 		}
 
+		// $scope.$watch('player.$playlist', function() {
+		// 	console.log('promena');
+		// 	console.log($scope.currentStation.radioStream[0].src);
+		// 	console.log($scope.player.$playlist[0].src);
+		// 	if($scope.player.$playlist[0].src == $scope.currentStation.radioStream[0].src) {
+		// 		console.log('src e isto');
 
+		// 	} else {
+		// 		console.log('src e razlicito');
+
+		// 	}
+		// });
 
 		$scope.loading = false;
 		$scope.playing = false;
@@ -112,6 +123,9 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 		$scope.$watch('volume.max', function() {
 			$scope.player.setVolume($scope.volume.max/100)
 			$localStorage.volume = $scope.volume.max;
+
+
+
 		})
 
 		$scope.$watch('title', function() {
