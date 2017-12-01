@@ -38,6 +38,7 @@ Route::post('sendmail','MailController@basic_email');
 
 Route::get('/{url}.html', 'StaticPagesController@index')->name('staticPage');
 
+Route::get('/play/{slug}/{streamId}', 'StreamController@index')->name('streamPlay');
 
 
 

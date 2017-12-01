@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\LogoDownload::class
+        Commands\LogoDownload::class,
+        Commands\CheckStream::class
     ];
 
     /**
