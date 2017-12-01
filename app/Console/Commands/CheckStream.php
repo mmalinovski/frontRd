@@ -48,9 +48,10 @@ class CheckStream extends Command
             $url->save();
             echo "\n";
             echo 'Url no.'.$counter."\n";
-            echo $url->station->listenurl."\n";
+            dd($url);
+            echo $url->streams[0]->listenurl."\n";
 
-            $urlCheck = $url->station->listenurl;
+            $urlCheck = $url->streams->listenurl;
             $urlHeaders = @get_headers($urlCheck);
             if($urlHeaders === false) return false;
             foreach($urlHeaders as $header) { // parse all headers:
