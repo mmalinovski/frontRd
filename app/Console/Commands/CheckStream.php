@@ -48,6 +48,7 @@ class CheckStream extends Command
             $url->save();
             echo "\n";
             echo 'Url no.'.$counter."\n";
+            print_r($url->streams);
             echo $url->streams[0]->listenurl."\n";
 
             $urlCheck = $url->streams->listenurl;
