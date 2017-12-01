@@ -52,7 +52,10 @@ class CheckStream extends Command
 
 			$urlCheck = $url->streams[0]->listenurl;
 			$urlHeaders = @get_headers($urlCheck);
-			if($urlHeaders === false) {
+			if(!is_array($url->streams[0])){
+				$url->active = '0';
+				echo ' Url ne e uredu.';
+			} elseif($urlHeaders === false) {
 				$url->active = '0';
 				echo 'Url ne e uredu.';
 			}
@@ -66,11 +69,11 @@ class CheckStream extends Command
 				print_r($code);
 				if($code==200) {
 					$url->active = '1';
-					echo 'Url uredu.';
+					echo ' Url uredu.';
 
 				} else {
 					$url->active = '0';
-					echo 'Url ne e uredu.';
+					echo ' Url ne e uredu.';
 				}
 
 			}
