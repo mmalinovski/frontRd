@@ -66,10 +66,6 @@ data-ng:controller="MainController" ng-app="radioApp" ng-cloak>
 
 
         <script src="https://use.fontawesome.com/32c9731015.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js">
-        </script>
-
 
         {!!
             Minify::javascript([
@@ -88,7 +84,6 @@ data-ng:controller="MainController" ng-app="radioApp" ng-cloak>
         <script src="{{ asset('/res/global/directives/mediaPlayer.js') }}"></script>
         <script src="{{ asset('/res/global/modules/ngStorage.js') }}"></script>
         <script src="{{ asset('/res/global/directives/rangeSlider.js') }}"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
         <script src="{{ asset('/res/js/uiSelect.js') }}"></script>
         
 
