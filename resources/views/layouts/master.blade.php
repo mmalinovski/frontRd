@@ -71,7 +71,7 @@ data-ng:controller="MainController" ng-app="radioApp" ng-cloak>
 
         {!!
             Minify::javascript([
-                "/res/js/angular_v_1_6_5.js"
+                "/res/js/angular_v_1_6_5.js",
                 "/res/js/angular_ui_router_v_1_0_3.js",
                 "/res/js/angularApp.js",
                 "/res/js/routes.js",
