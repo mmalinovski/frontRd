@@ -47,16 +47,16 @@
 						}
 					}
 				})
-				.state("genres.stationsList.paginate", {
-					url: "?page=:page",
-					views: {
-						"Content@": {
-							templateUrl: function($stateParams) {
-								return "/genres/" + $stateParams.slug + "?page=" + $stateParams.page + "&ajax=true";
-							}
-						}
-					}
-				})
+				// .state("genres.stationsList.paginate", {
+				// 	url: "?page=:page",
+				// 	views: {
+				// 		"Content@": {
+				// 			templateUrl: function($stateParams) {
+				// 				return "/genres/" + $stateParams.slug + "?page=" + $stateParams.page + "&ajax=true";
+				// 			}
+				// 		}
+				// 	}
+				// })
 				.state("about", {
 					url: "/about.html",
 					views: {
