@@ -47,7 +47,7 @@
 						}
 					}
 				})
-				.state("genres.stationsList.Paginate", {
+				.state("genres.stationsListPpaginate", {
 					url: "?page=:page",
 					views: {
 						"Content@": {
