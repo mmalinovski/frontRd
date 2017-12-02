@@ -34,7 +34,7 @@ class StationsRepository extends BaseRepository {
     	// 			->get();
 
         $genre = Genre::where('slug', $genreSlug)->first();
-        $result = $genre->stations->simplePaginate(15);
+        $result = $genre->with('stations')->paginate(20);
 
 
     	// $queries = \DB::getQueryLog();
