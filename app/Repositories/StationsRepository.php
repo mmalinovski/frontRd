@@ -33,14 +33,14 @@ class StationsRepository extends BaseRepository {
     	// 			->where('genres.slug', '=', $genreSlug)
     	// 			->get();
 
-        $genre = Genre::where('slug', $genreSlug)->first();
-        $result = $genre->with('stations')->paginate(20);
+        $genre = Genre::where('slug', $genreSlug)->first()->stations()->paginate(20);
+                // $result = $genre->stations;
 
 
     	// $queries = \DB::getQueryLog();
 
     	
-    	return $result;
+    	return $genre;
     }
 
     public function get() {
