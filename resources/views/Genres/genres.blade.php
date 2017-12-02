@@ -68,6 +68,7 @@
 					
 				</ul>
 		</div>
+		{{ $genres->links() }}
 
 	</section>
 
