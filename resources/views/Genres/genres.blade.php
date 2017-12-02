@@ -68,7 +68,7 @@
 					
 				</ul>
 		</div>
-		{{ $genre->links() }}
+		{{ $stations->byGenre($genres->active->slug)->links() }}
 
 	</section>
 
