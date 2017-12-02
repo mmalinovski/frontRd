@@ -68,7 +68,7 @@
 					
 				</ul>
 		</div>
-		{{ $genres->links() }}
+		{{ $genre->links() }}
 
 	</section>
 
