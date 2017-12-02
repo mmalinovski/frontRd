@@ -35,7 +35,8 @@
 						}
 					}
 				})
-				.state("genres.stationsList", {
+				.state("stationsList", {
+					parent: 'genres',
 					url: "/:slug",
 					views: {
 						"Content@": {
@@ -47,16 +48,17 @@
 						}
 					}
 				})
-				// .state("genres.stationsList.paginate", {
-				// 	url: "?page=:page",
-				// 	views: {
-				// 		"Content@": {
-				// 			templateUrl: function($stateParams) {
-				// 				return "/genres/" + $stateParams.slug + "?page=" + $stateParams.page + "&ajax=true";
-				// 			}
-				// 		}
-				// 	}
-				// })
+				.state("paginate", {
+					parent: 'stationsList',
+					url: "?page=:page",
+					views: {
+						"Content@": {
+							templateUrl: function($stateParams) {
+								return "/genres/" + $stateParams.slug + "?page=" + $stateParams.page + "&ajax=true";
+							}
+						}
+					}
+				})
 				.state("about", {
 					url: "/about.html",
 					views: {
