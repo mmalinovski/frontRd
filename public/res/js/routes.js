@@ -35,8 +35,7 @@
 						}
 					}
 				})
-				.state("stationsList", {
-					parent: 'genres',
+				.state("genres.stationsList", {
 					url: "/:slug",
 					views: {
 						"Content@": {
@@ -48,8 +47,7 @@
 						}
 					}
 				})
-				.state("paginate", {
-					parent: 'stationsList',
+				.state("genres.stationsList.paginate", {
 					url: "?page",
 					views: {
 						"Content@": {
