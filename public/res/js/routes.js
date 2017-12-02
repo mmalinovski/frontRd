@@ -47,7 +47,18 @@
 						}
 					}
 				})
-				
+				.state("stationsList.Paginate", {
+					url: "?page=:page",
+					views: {
+						"Content@": {
+							templateUrl: function($stateParams) {
+								return "/genres/"+$stateParams.slug+ "?page=" + $stateParams.page + "?ajax=true";
+							},
+
+							// controller: ""
+						}
+					}
+				})
 				.state("about", {
 					url: "/about.html",
 					views: {
