@@ -67,8 +67,9 @@
 					@endforeach
 					
 				</ul>
+				{{ $stations->byGenre($genres->active->slug)->links() }}
 		</div>
-		{{ $stations->byGenre($genres->active->slug)->links() }}
+
 
 	</section>
 
