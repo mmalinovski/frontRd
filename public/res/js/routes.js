@@ -52,7 +52,7 @@
 					views: {
 						"Content@": {
 							templateUrl: function($stateParams) {
-								return "/genres/" + $stateParams.slug + "?page=" + $stateParams.page + "?ajax=true";
+								return "/genres/" + $stateParams.slug + "?page=" + $stateParams.page + "&ajax=true";
 							},
 
 							// controller: ""
