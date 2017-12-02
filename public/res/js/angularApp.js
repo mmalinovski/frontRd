@@ -35,6 +35,8 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 		$scope.title = '';
 
 
+		console.log($state);
+
 
 		$transitions.onSuccess({},
 			function(){ 
