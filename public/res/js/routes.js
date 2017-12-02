@@ -24,7 +24,7 @@
 					}
 				})
 				.state("genres.paginate", {
-					url: "?page=:pagValue",
+					url: "?page",
 					views: {
 						"Content@": {
 							templateUrl: function($stateParams) {
@@ -50,7 +50,7 @@
 				})
 				.state("paginate", {
 					parent: 'stationsList',
-					url: "?page=:page",
+					url: "?page",
 					views: {
 						"Content@": {
 							templateUrl: function($stateParams) {
