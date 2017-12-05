@@ -16,7 +16,7 @@
 			<ul>
 				<li><a href="{{route('staticPage', ['url' =>'terms-and-conditions'])}}" class="linkPadding">Terms and Conditions</a></li>
 				<li><a href="{{route('staticPage', ['url' =>'privacy-policy'])}}" class="linkPadding">Privacy Policy</a></li>
-				<li><a href="{{route('staticPage', ['url' =>'legal-notice'])}}" class="linkPadding">Legal Notice</a></li>
+				<!-- <li><a href="{{route('staticPage', ['url' =>'legal-notice'])}}" class="linkPadding">Legal Notice</a></li> -->
 			</ul>
 		</div>
 
