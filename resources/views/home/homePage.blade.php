@@ -53,6 +53,20 @@
 			<section class="wrapper">
 				<h1 class="headerStyle">Editors Picks</h1>
 			</section>
+
+			<div class="adsInMiddle">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- nextunerAd -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-5401857225374045"
+				     data-ad-slot="6676917820"
+				     data-ad-format="auto"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+
 			<div class="grid">
 
 				 <?php $i = 1 ?>
@@ -100,6 +114,20 @@
 
 			<section class="wrapper">
 				<h1 class="headerStyle">Genres</h1>
+
+				<div class="adsInMiddle">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- nextunerAd -->
+					<ins class="adsbygoogle"
+					     style="display:block"
+					     data-ad-client="ca-pub-5401857225374045"
+					     data-ad-slot="6676917820"
+					     data-ad-format="auto"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+				
 				<ul class="flex_container">
 					@foreach($genres as $genre)
 						<li>

@@ -7,8 +7,7 @@
 	
 		<h1 class="headerStyle" titlePage>Contact Page</h1>
 
-		<form method="post" name="emailForm" action="sendmail" id="contactForm">
-			{{ csrf_field() }}
+		<form method="post" name="emailForm" action="/mail.php" id="contactForm">
 			<div class="textEmail">
 				<input type="text" name="name" placeholder="Full Name">
 				<input type="text" name="email" placeholder="E-mail">
@@ -17,7 +16,7 @@
 				<!-- <input type="text" name="" placeholder="Your Message"> -->
 				<textarea name="message" placeholder=" Your Message..."></textarea>
 			</div>
-			<div class="g-recaptcha center-text" data-sitekey="6LfNfzYUAAAAAHx2aqRaesQschAPBUiChnZhFnU_" ></div>
+			<!-- <div class="g-recaptcha center-text" data-sitekey="6LfNfzYUAAAAAHx2aqRaesQschAPBUiChnZhFnU_" ></div> -->
 			<input class="moreStations" type="submit" value="Send" name="submit">
 
 		</form>
