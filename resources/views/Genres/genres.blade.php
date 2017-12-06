@@ -39,9 +39,9 @@
 						<a href="{{ route('station', ['slug' => $station->slug]) }}" class="glavno" semantic-slug="{{ $station->slug }}">
 							<img semantic-logo="src" src="{{ $station->logo }}" alt="{{$station->name}}">
 							<span class="currentTrack">
-								<span semantic-name class="stationName">{{$station->name }}</span>
-								<span id="stationDetails">{{str_limit(ucfirst(strtolower(@$station->info)), 60)}}</span>
-								@if(empty(@$station->info))
+								<span semantic-name class="stationName">{{ucfirst($station->name) }}</span>
+								<span id="stationDetails">{{str_limit(ucfirst(strtolower(@$station->details->info)), 60)}}</span>
+								@if(empty(@$station->details->info))
 								<span id="stationDetails">Click for more!</span>
 								@endif
 							</span>
