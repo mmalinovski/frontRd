@@ -11,7 +11,7 @@
 			<div id="stationColumn1">
 				<a href="#" class="round-button favoriteHeart"><i class="fa fa-heart" aria-hidden="true"></i></a>
 				<a href="#">
-					<img src="{{$station->details->logo}}" alt="radio" semantic-logo="src">
+					<img src="{{$station->logo}}" alt="radio" semantic-logo="src">
 				</a>
 			</div>
 			<div id="stationColumn2">

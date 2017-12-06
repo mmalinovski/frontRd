@@ -39,7 +39,7 @@
 
 		<div class="flex_container">
 			<div class="columnItemLogo">
-				<img  src="{{$station->details->logo}}" alt="klymaxx" width="320px">
+				<img  src="{{$station->logo}}" alt="klymaxx" width="320px">
 			</div>
 
 		</div>
