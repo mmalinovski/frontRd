@@ -26,6 +26,7 @@
 				<li><a href="{{route('staticPage', ['url' =>'contact'])}}">Contact</a></li>
 				<li><a href="{{route('staticPage', ['url' =>'apps'])}}">Apps</a></li>
 				<li><a href="{{route('staticPage', ['url' =>'help-faq'])}}">Help/FAQ</a></li>
+				<li><a href="{{route('staticPage', ['url' =>'broadcasters'])}}">Broadcasters</a></li>
 			</ul>
 		</div>
 

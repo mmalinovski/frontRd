@@ -4,6 +4,7 @@
 
 <main pageTitle>
 	<!-- <h1 ng-hide="true" titlePage>Contact Page</h1> -->
+	<div class="wrapper">
 	
 		<h1 class="headerStyle" titlePage>Contact Page</h1>
 
@@ -20,6 +21,7 @@
 			<input class="moreStations" type="submit" value="Send" name="submit">
 
 		</form>
+	</div>
 </main>
 
 @endsection

@@ -82,7 +82,8 @@
 			</div> -->
 
 			<!-- Range Slider -->
-			<div range-slider min="0" max="100" model-max="volume.max" pin-handle="min">
+			<div class="sliderWidth">
+				<div range-slider min="0" max="100" model-max="volume.max" pin-handle="min"></div>
 			</div>
 
 			<div class="columnButtons">

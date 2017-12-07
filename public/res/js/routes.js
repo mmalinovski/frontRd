@@ -75,6 +75,15 @@
 						}
 					}
 				})
+				.state("broadcasters", {
+					url: "/broadcasters.html",
+					views: {
+						"Content@": {
+							templateUrl: "/broadcasters.html?ajax=true",
+							// controller: ""
+						}
+					}
+				})
 				.state("terms-and-conditions", {
 					url: "/terms-and-conditions.html",
 					views: {

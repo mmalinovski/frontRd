@@ -6,7 +6,7 @@
 
 	<section class="header">
 		<div class="nadHeder">
-				<h1 titlePage>Wellcome to Next Tuner</h1>
+				<h1 titlePage>Wellcome to Nextuner</h1>
 			</div>
 
 
