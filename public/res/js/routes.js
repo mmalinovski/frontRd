@@ -75,6 +75,42 @@
 						}
 					}
 				})
+				.state("iPhone", {
+					url: "/iPhone.html",
+					views: {
+						"Content@": {
+							templateUrl: "/iPhone.html?ajax=true",
+							// controller: ""
+						}
+					}
+				})
+				.state("iPad", {
+					url: "/iPad.html",
+					views: {
+						"Content@": {
+							templateUrl: "/iPad.html?ajax=true",
+							// controller: ""
+						}
+					}
+				})
+				.state("android", {
+					url: "/android.html",
+					views: {
+						"Content@": {
+							templateUrl: "/android.html?ajax=true",
+							// controller: ""
+						}
+					}
+				})
+				.state("help", {
+					url: "/help-faq.html",
+					views: {
+						"Content@": {
+							templateUrl: "/help-faq.html?ajax=true",
+							// controller: ""
+						}
+					}
+				})
 				.state("broadcasters", {
 					url: "/broadcasters.html",
 					views: {

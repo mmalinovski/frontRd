@@ -2,7 +2,7 @@
 
 @section('content')
 
-<main pageTitle>
+<main page-title>
 	<!-- <h1 ng-hide="true" titlePage>Contact Page</h1> -->
 	<div class="wrapper">
 	

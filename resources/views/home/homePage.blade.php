@@ -56,14 +56,11 @@
 
 			<div class="adsInMiddle">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- nextunerAd -->
-				<ins class="adsbygoogle"
-				     style="display:block"
-				     data-ad-client="ca-pub-5401857225374045"
-				     data-ad-slot="6676917820"
-				     data-ad-format="auto"></ins>
 				<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
+				  (adsbygoogle = window.adsbygoogle || []).push({
+				    google_ad_client: "ca-pub-9424350722161674",
+				    enable_page_level_ads: true
+				  });
 				</script>
 			</div>
 
@@ -117,14 +114,11 @@
 
 				<div class="adsInMiddle">
 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<!-- nextunerAd -->
-					<ins class="adsbygoogle"
-					     style="display:block"
-					     data-ad-client="ca-pub-5401857225374045"
-					     data-ad-slot="6676917820"
-					     data-ad-format="auto"></ins>
 					<script>
-					(adsbygoogle = window.adsbygoogle || []).push({});
+					  (adsbygoogle = window.adsbygoogle || []).push({
+					    google_ad_client: "ca-pub-9424350722161674",
+					    enable_page_level_ads: true
+					  });
 					</script>
 				</div>
 				
