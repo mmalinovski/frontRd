@@ -18,7 +18,7 @@
 			</script>
 		</div>
 		<h1 class="headerStyle" titlePage>
-			{{ $station->name }} Radio
+			{{ ucfirst($station->name) }} Radio
 		</h1>
 		<div id="radioStation">
 			<div id="stationColumn1">
@@ -46,7 +46,7 @@
 							}"
 						aria-hidden="true"></i></button>
 
-					<p semantic-name class="stationText" semantic-slug="{{ $station->slug }}">{{ $station->name }}</p>
+					<p semantic-name class="stationText" semantic-slug="{{ $station->slug }}">{{ ucfirst($station->name) }}</p>
 					<!-- <a href="#" class="addToFavorite"><i class="fa fa-heart-o" aria-hidden="true"><span> Add to favorites</span></i></a> -->
 					<div class="socialMediaButtonsForStations">
 						<a href="#" class="fa fa-facebook"></a>

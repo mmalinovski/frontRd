@@ -50,7 +50,7 @@
 					<li semantic-meta execute="addStation(station)">
 
 						<a href="{{ route('station', ['slug' => $station->slug]) }}" class="glavno" semantic-slug="{{ $station->slug }}">
-							<img semantic-logo="src" src="{{ $station->logo }}" alt="{{$station->name}}">
+							<img semantic-logo="src" src="{{ $station->logo }}" width="90" height="90" alt="{{$station->name}}">
 							<span class="currentTrack">
 								<span semantic-name class="stationName">{{ucfirst($station->name) }}</span>
 								<span id="stationDetails">{{str_limit(ucfirst(strtolower(@$station->details->info)), 60)}}</span>

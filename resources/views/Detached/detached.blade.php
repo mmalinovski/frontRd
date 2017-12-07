@@ -45,7 +45,7 @@
 		</div>
 		<div class="flex_container">
 			<div class="columnItem">
-				<a href="#"><h1>{{ $station->name }}</h1></a>
+				<a href="#"><h1>{{ ucfirst($station->name) }}</h1></a>
 				<p>@{{player.formatTime}}</p>
 			</div>
 		</div>

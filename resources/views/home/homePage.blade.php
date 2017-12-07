@@ -35,7 +35,7 @@
 							@foreach($randomStations as $random)
 								<li>
 									<a href="{{ route('station', ['slug' => $random->slug]) }}">
-										<img ng-src="{{ $random->logo }}" alt="{{$random->name}}">
+										<img ng-src="{{ $random->logo }}" width="200" height="200" alt="{{$random->name}}">
 										<span>{{$random->name}}</span>
 									</a>
 								</li>
@@ -92,7 +92,7 @@
 					@foreach($randomStationsPopular as $popular)
 					<li>
 						<a href="{{ route('station', ['slug' => $popular->slug]) }}">
-							<img  ng-src="{{ $popular->logo }}" alt="{{$popular->name}}">
+							<img  ng-src="{{ $popular->logo }}" width="70" height="70" alt="{{$popular->name}}">
 							<span class="currentTrack">
 								<span>{{$popular->name}}</span>
 								<span>{{str_limit(ucfirst(strtolower($popular->details->info)), 12)}}</span>
