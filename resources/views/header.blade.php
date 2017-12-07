@@ -1,6 +1,7 @@
 <header>
 		<h1 id="logo">
-			<img src="/res/img/logo/NextTuner-lightBG.png" alt="Logo" height="60">
+			<img src="/res/img/logo/NexTuner-logo.svg" alt="Logo" height="60">
+			<!-- NextTuner-lightBG.png -->
 		</h1>
 		<nav>
 			 <!-- HAMBURGER MENU -->
