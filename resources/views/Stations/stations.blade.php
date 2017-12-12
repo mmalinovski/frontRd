@@ -33,7 +33,7 @@
 				 <!-- Audio Player -->
 						 <audio id="audioPlayer" preload="none">
 						 @foreach($streams->byStation($station->id) as $stream) 
-							<source semantic-src="src" src="{{$stream->listenurl}}" semantic-type="type" type="{{$stream->type}}">
+							<source semantic-src="src" src="{{$stream->listenurl}}" >
 							
 						 @endforeach 
 						</audio>
