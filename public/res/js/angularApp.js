@@ -13,7 +13,7 @@ var app = angular
 run.$inject = ['$rootScope', '$location', '$window', '$transitions'];
     function run($rootScope, $location, $window, $transitions) {
         // initialise google analytics
-        $window.ga('create', 'UA-83841379-2', 'auto');
+        $window.ga('create', 'UA-109789442-1', 'auto');
  
         // track pageview on state change
         $transitions.onSuccess({},

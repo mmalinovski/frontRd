@@ -29,6 +29,9 @@
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     </script>
 
+
+    
+
 </head>
 <body ng-app="detached" data-ng:controller="detachedController">
  <div class="page-bg">
