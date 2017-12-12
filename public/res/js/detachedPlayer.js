@@ -1,6 +1,7 @@
 'use-strict';
 
 var appDetached = angular.module('detached', [
+	'ui.router',
 	'ngStorage',
 	'mediaPlayer',
 	'ui-rangeSlider',
