@@ -7,8 +7,8 @@ var appDetached = angular.module('detached', [
 	'ngSanitize',
 ]).run(run);
 
-run.$inject = ['$rootScope', '$location', '$window', '$transitions'];
-    function run($rootScope, $location, $window, $transitions) {
+run.$inject = ['$location', '$window', '$transitions'];
+    function run($location, $window, $transitions) {
         // initialise google analytics
         $window.ga('create', 'UA-109789442-1', 'auto');
  
