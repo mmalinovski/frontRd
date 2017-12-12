@@ -29,11 +29,14 @@
 		<div id="genresContent">
 			<div class="googleAds">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Nextuner Responsive -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-2606840313857646"
+				     data-ad-slot="5750088194"
+				     data-ad-format="auto"></ins>
 				<script>
-				  (adsbygoogle = window.adsbygoogle || []).push({
-				    google_ad_client: "ca-pub-9424350722161674",
-				    enable_page_level_ads: true
-				  });
+				(adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
 			</div>
 
