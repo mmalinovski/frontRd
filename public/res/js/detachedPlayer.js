@@ -5,7 +5,20 @@ var appDetached = angular.module('detached', [
 	'mediaPlayer',
 	'ui-rangeSlider',
 	'ngSanitize',
-]);
+]).run(run);
+
+run.$inject = ['$rootScope', '$location', '$window', '$transitions'];
+    function run($rootScope, $location, $window, $transitions) {
+        // initialise google analytics
+        $window.ga('create', 'UA-109789442-1', 'auto');
+ 
+        // track pageview on state change
+        $transitions.onSuccess({},
+			function(){ 
+        $window.ga('send', 'pageview', $location.path());
+        	}
+		);
+    }
 
 appDetached.controller('detachedController', ['$scope', '$localStorage', '$sessionStorage', '$timeout',
 	function($scope, $localStorage, $sessionStorage, $timeout) {
