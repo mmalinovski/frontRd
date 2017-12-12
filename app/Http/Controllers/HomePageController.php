@@ -51,7 +51,7 @@ class HomePageController extends LnController
 
 		 // \DB::connection()->enableQueryLog();
 
-		$query = Station::where('name', 'like', '%' . $request->search . '%')->limit(10)->get();
+		$query = Station::where('name', 'like', '%' . $request->search . '%')->where('active', 1)->limit(10)->get();
 
 		// $queries = \DB::getQueryLog();
 

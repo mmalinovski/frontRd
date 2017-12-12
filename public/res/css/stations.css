@@ -1,3 +1,8 @@
+
+
+
+
+
 #radioStation {
 	display: flex;
 	flex-direction: row;
@@ -139,6 +144,8 @@
 
 #aboutStation {
 	margin-top: 50px;
+	width: 70%;
+	margin-left: 20px;
 }
 @media only screen and (max-width: 650px) {
 	#aboutStation {

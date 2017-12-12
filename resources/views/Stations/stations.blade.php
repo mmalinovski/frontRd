@@ -62,6 +62,7 @@
 						</a>
 					</div>
 			</div>
+
 			<div class="addPlace">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 				<!-- Nextuner Responsive -->
@@ -74,16 +75,18 @@
 				(adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
 			</div>
+			
 		</div>
 		
 	</section>
 
-	<section id="aboutStation" class="wrapper">
+	<section id="aboutStation" class="">
 		<i class="fa fa-info-circle fa-2x" aria-hidden="true"><span>  About {{$station->name}}</span></i>
 		<p>{{$station->details->info}}</p>
 		<p> Visit <a href="#">website</a> for more info!</p>
 				
 	</section>
+
 
 	
 	</main>
