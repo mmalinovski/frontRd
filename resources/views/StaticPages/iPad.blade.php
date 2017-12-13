@@ -6,7 +6,7 @@
 	<!-- <h1 ng-hide="true" titlePage>Iphone</h1> -->
 		<div class="wrapper">
 		
-			<h1 class="headerStyle" titlePage>Ipad App is Comming Soon!</h1>
+			<h1 class="headerStyle" titlePage>Ipad App is Coming Soon!</h1>
 			
 		</div>
 </main>
