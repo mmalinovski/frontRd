@@ -9,7 +9,7 @@
 	<section id="genreSection">
 
 		<aside>
-			<h1 titlePage>Genres</h1>
+			<h1 >Genres</h1>
 			
 			<ul>
 				@foreach ($genres->all() as $g) 
@@ -40,7 +40,7 @@
 				</script>
 			</div>
 
-				<h1 class="">
+				<h1 class="" titlePage>
 					{{ $genres->active->name }} Stations</h1>
 				<ul id="genresContainer" class="flex_container">	
 					<?php $s = $stations->byGenre($genres->active->slug) ?>
