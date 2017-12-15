@@ -58,6 +58,10 @@ class GenresController extends LnController
         // \DB::connection()->enableQueryLog();
 
         $genres = new GenresRepository($slug);
+        $genres->all();
+        
+        $page = new \StdClass();
+        $page->title = $genres->active->name;
 
         $stations = new StationsRepository();
 
@@ -72,7 +76,7 @@ class GenresController extends LnController
 
         // $genres = Genre::all();
 
-        return view('Genres.genres')->with('genres', $genres)->with('stations', $stations)->with('streams', $streams);
+        return view('Genres.genres')->with('page', $page)->with('genres', $genres)->with('stations', $stations)->with('streams', $streams);
     }
 
 }

@@ -40,8 +40,11 @@ class StationsController extends LnController
         $stationDetails = $station->get();
         $streams = new StreamsRepository();
 
+        $page = new \StdClass();
+
+        $page->title = $stationDetails->name;
 
 
-        return view('Stations.stations')->with('streams', $streams)->with('station', $stationDetails);
+        return view('Stations.stations')->with('streams', $streams)->with('station', $stationDetails)->with('page', $page);
     }
 }
