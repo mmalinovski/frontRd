@@ -6,7 +6,7 @@
 
 	<section class="header">
 		<div class="nadHeder">
-				<h1 titlePage>Welcome to Nextuner</h1>
+				<h1 titlePage>Nextuner - Biggest Free internet radio directory</h1>
 			</div>
 
 
