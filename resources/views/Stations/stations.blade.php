@@ -19,7 +19,9 @@
 		</div>
 		<h1 class="headerStyle" titlePage>
 			{{ ucfirst($station->name) }} Radio
+			<button class="moreStations" id="reportStation" ng-click="showHideModal = true">Report Station</button>
 		</h1>
+
 		<div id="radioStation">
 			<div id="stationColumn1">
 				<a href="#" class="round-button favoriteHeart"><i class="fa fa-heart" aria-hidden="true"></i></a>
@@ -95,5 +97,30 @@
 	</script>
 
 	
+	<!-- ***************   M  O  D  A  L   *************** -->
+
+	<div id="myModal" class="modal" ng-show="showHideModal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+		 <span class="close" ng-click="showHideModal = false">&times;</span>
+		 <h1 class="headerStyle" titlePage>Report Station</h1>
+
+		 		<form method="post" name="emailForm" action="/mail.php" id="contactForm">
+		 			<div class="messageForm">
+		 				<input type="hidden" name="stationSlug" placeholder="{{ $station->slug }}">
+		 				<textarea name="message" placeholder=" Your Message..."></textarea>
+		 			</div>
+		 			<!-- <div class="g-recaptcha center-text" data-sitekey="6LfNfzYUAAAAAHx2aqRaesQschAPBUiChnZhFnU_" ></div> -->
+		 			<input class="moreStations" type="submit" value="Send" name="submit">
+
+		 		</form>
+		</div>
+
+	</div>
+
+
+
+
 
 @endsection

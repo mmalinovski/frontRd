@@ -31,6 +31,7 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 		$scope.shouldPlay = false;
 		$scope.showHamMenuVar = false;
 		$scope.hideHamburger = true;
+		$scope.showHideModal = false;
 
 		$scope.title = '';
 
@@ -108,6 +109,8 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 			$scope.hideHamburger = !$scope.hideHamburger;
 
 		}
+
+
 
 		// $scope.$watch('player.$playlist', function() {
 		// 	console.log('promena');
