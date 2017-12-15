@@ -71,7 +71,7 @@
 
 				 <?php $i = 1 ?>
 				 @foreach($randomStationsEditor as $editorStation)
-				<a href="{{ route('station', ['slug' => $random->slug]) }}" class="box g{{$i}}">
+				<a href="{{ route('station', ['slug' => $editorStation->slug]) }}" class="box g{{$i}}">
 					<img ng-src="{{ $editorStation->logo }}" alt="{{$editorStation->name}}">
 				</a>
 			  <?php $i++?>

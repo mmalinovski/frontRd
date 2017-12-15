@@ -51,6 +51,7 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 
 
 		$scope.playingStation = {};
+
 		$scope.playPausePlayer = function() {
 
 			if ($scope.playingStation.radioTitle == $scope.currentStation.radioTitle) {
@@ -78,6 +79,14 @@ app.controller('MainController', ['$rootScope', '$scope', '$localStorage', '$ses
 			}
 
 		}
+
+		$scope.detachedPlay = function() {
+			if ($scope.player.playing) {
+				$scope.player.stop();
+				$scope.playPausePlayer();
+			}
+		}
+
 		
 		$scope.setStation = function(index) {
 			
