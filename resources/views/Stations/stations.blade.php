@@ -106,10 +106,12 @@
 		 <span class="close" ng-click="showHideModal = false">&times;</span>
 		 <h1 class="headerStyle" titlePage>Report Station</h1>
 
-		 		<form method="post" name="emailForm" action="/mail.php" id="contactForm">
+		 		<form method="post" name="reportForm" action="/reportStation.php" id="contactForm">
 		 			<div class="messageForm">
 		 				<input type="hidden" name="stationSlug" placeholder="{{ $station->slug }}">
-		 				<textarea name="message" placeholder=" Your Message..."></textarea>
+		 				<input type="text" name="name" placeholder="Full Name">
+		 				<input type="text" name="email" placeholder="E-mail">
+		 				<textarea class="textWidth" name="message" placeholder=" Your Message..."></textarea>
 		 			</div>
 		 			<!-- <div class="g-recaptcha center-text" data-sitekey="6LfNfzYUAAAAAHx2aqRaesQschAPBUiChnZhFnU_" ></div> -->
 		 			<input class="moreStations" type="submit" value="Send" name="submit">
