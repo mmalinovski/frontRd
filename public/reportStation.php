@@ -58,10 +58,9 @@ try {
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Station Report!';
-    $mail->Body    = $_POST['message'];
-    $mail->Station = $_POST['stationSlug'];
-    $mail->AltBody =  $_POST['message'];
+    $mail->Subject = 'Station Report!'.' - '.$_POST['stationSlug'];
+    $mail->Body    = $_POST['stationSlug'].'is reported that - '.$_POST['report'];
+    // $mail->AltBody =  $_POST['message'];
 
     $mail->send();
     // echo 'Message has been sent';

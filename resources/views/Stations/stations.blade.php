@@ -19,7 +19,7 @@
 		</div>
 		<h1 class="headerStyle" titlePage>
 			{{ ucfirst($station->name) }} Radio
-			<button class="moreStations" id="reportStation" ng-click="showHideModal = true">Report Station</button>
+			<button class="moreStations" id="reportStation" ng-click="showHideModal = true">Station not working? Click to Report!</button>
 		</h1>
 
 		<div id="radioStation">
@@ -109,9 +109,14 @@
 		 		<form method="post" name="reportForm" action="/reportStation.php" id="contactForm">
 		 			<div class="messageForm">
 		 				<input type="hidden" name="stationSlug" placeholder="{{ $station->slug }}">
-		 				<input type="text" name="name" placeholder="Full Name">
-		 				<input type="text" name="email" placeholder="E-mail">
-		 				<textarea class="textWidth" name="message" placeholder=" Your Message..."></textarea>
+		 				<!-- <input type="text" name="name" placeholder="Full Name"> -->
+		 				<!-- <input type="text" name="email" placeholder="E-mail"> -->
+		 				<!-- <textarea class="textWidth" name="message" placeholder=" Your Message..."></textarea> -->
+		 				<input type="radio" name="report" value="Stream doesn't want to start" checked> Stream doesn't want to start!<br>
+		 				<input type="radio" name="report" value="Information about the radio isn't correct" > Information about the radio isn't correct!<br>
+		 				<input type="radio" name="report" value="Station plays another station stream" > Station plays another station stream!<br>
+		 				<input type="radio" name="report" value="This radio station is not avaliable in your country message" > This radio station is not avaliable in your country message!<br>
+		 				<input type="radio" name="report" value="Station is streaming inappropriate content" > Station is streaming inappropriate content!<br>
 		 			</div>
 		 			<!-- <div class="g-recaptcha center-text" data-sitekey="6LfNfzYUAAAAAHx2aqRaesQschAPBUiChnZhFnU_" ></div> -->
 		 			<input class="moreStations" type="submit" value="Send" name="submit">

@@ -37,3 +37,7 @@
 	resize: none;
 	margin-bottom: 30px;
 }
+
+#contactForm input[type="radio"] {
+	margin-bottom: 30px;
+}
