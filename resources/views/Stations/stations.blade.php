@@ -108,7 +108,7 @@
 
 		 		<form method="post" name="reportForm" action="/reportStation.php" id="contactForm">
 		 			<div class="messageForm">
-		 				<input type="hidden" name="stationSlug" placeholder="{{ $station->slug }}">
+		 				<input type="hidden" name="stationSlug" placeholder="{{ $station->slug }}" value="{{ $station->slug }}">
 		 				<!-- <input type="text" name="name" placeholder="Full Name"> -->
 		 				<!-- <input type="text" name="email" placeholder="E-mail"> -->
 		 				<!-- <textarea class="textWidth" name="message" placeholder=" Your Message..."></textarea> -->
