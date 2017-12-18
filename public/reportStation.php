@@ -45,7 +45,7 @@ try {
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom($_POST['email'], $_POST['name']);
+    // $mail->setFrom($_POST['email'], $_POST['name']);
     $mail->addAddress('info@nextuner.com', 'Nextuner');     // Add a recipient (send mail to to)
     $mail->addAddress('stefan@livenetworks.mk');             
     // $mail->addReplyTo('info@example.com', 'Information');
