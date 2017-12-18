@@ -47,7 +47,7 @@ try {
     //Recipients
     $mail->setFrom($_POST['email'], $_POST['name']);
     $mail->addAddress('info@nextuner.com', 'Nextuner');     // Add a recipient (send mail to to)
-    // $mail->addAddress('ellen@example.com');               
+    $mail->addAddress('stefan@livenetworks.mk');             
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
     // $mail->addBCC('bcc@example.com');
