@@ -38,6 +38,11 @@ class StationsController extends LnController
 
         $station = new StationsRepository($slug);
         $stationDetails = $station->get();
+
+        if($stationDetails == null) {
+            return redirect("/");
+        }
+
         $streams = new StreamsRepository();
 
         $page = new \StdClass();
