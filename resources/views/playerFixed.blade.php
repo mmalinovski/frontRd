@@ -4,7 +4,7 @@
 
 	</audio>
 	<div class="columnImagePlaying">
-		<img ng-src="@{{ currentStation.imageUrl }}" alt="klymaxx">
+		<img ng-src="@{{ currentStation.imageUrl }}" alt="@{{ currentStation.slug }}">
 		<!-- <a href="#" class="round-button"><i class="fa fa-heart-o" aria-hidden="true"></i></a> -->
 	</div>
 	<div class="columnButtons">
