@@ -19,8 +19,9 @@
 		</div>
 		<h1 class="headerStyle" titlePage>
 			{{ ucfirst($station->name) }}
-			<button class="moreStations btnMoreStations" id="reportStation" ng-click="showHideModal = true">Station not working? Click to Report!</button>
+			
 		</h1>
+		<button class="moreStations btnMoreStations" id="reportStation" ng-click="showHideModal = true">Station not working? Click to Report!</button>
 
 		<div id="radioStation">
 			<div id="stationColumn1">
