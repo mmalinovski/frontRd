@@ -21,7 +21,7 @@
 			{{ ucfirst($station->name) }}
 			
 		</h1>
-		<button class="moreStations btnMoreStations" id="reportStation" ng-click="showHideModal = true">Station not working? Click to Report!</button>
+
 
 		<div id="radioStation">
 			<div id="stationColumn1">
@@ -67,6 +67,7 @@
 			</div>
 
 			<div class="addPlace">
+				<button class="moreStations btnMoreStations" id="reportStation" ng-click="showHideModal = true">Station not working? Click to Report!</button>
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 				<!-- Nextuner Responsive -->
 				<ins class="adsbygoogle"
