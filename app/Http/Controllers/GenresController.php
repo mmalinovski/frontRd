@@ -59,13 +59,21 @@ class GenresController extends LnController
 
         $genres = new GenresRepository($slug);
         $genres->all();
-        
-        $page = new \StdClass();
-        $page->title = $genres->active->name;
 
-        $stations = new StationsRepository();
+        if (property_exists($genres,"active")){
+            $page = new \StdClass();
+            $page->title = $genres->active->name;
 
-        $streams = new StreamsRepository();
+            $stations = new StationsRepository();
+            $streams = new StreamsRepository();
+
+            return view('Genres.genres')->with('page', $page)->with('genres', $genres)->with('stations', $stations)->with('streams', $streams);
+        }
+        else{
+            return redirect("/");
+        }
+
+
         
         // $genre = Genre::where('slug', $slug)->with('stations.details')->first();
         // $genre = $Stations->byGenre($slug);
@@ -76,7 +84,7 @@ class GenresController extends LnController
 
         // $genres = Genre::all();
 
-        return view('Genres.genres')->with('page', $page)->with('genres', $genres)->with('stations', $stations)->with('streams', $streams);
+
     }
 
 }

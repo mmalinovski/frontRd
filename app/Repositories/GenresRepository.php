@@ -33,7 +33,6 @@ class GenresRepository extends BaseRepository {
 
 
 	public function bySlug($slug) {
-
 		return Genre::where('slug', $slug)->first();
 	}
 
