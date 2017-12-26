@@ -9,9 +9,22 @@
   rdfs: http://www.w3.org/2000/01/rdf-schema#"
 data-ng:controller="MainController" ng-app="radioApp" ng-cloak>
 	<head>
+
+		<title>
+			@if (isset($page->title))
+				{{ $page->title . " &raquo; " }} 
+			@endif
+			Nextuner
+		</title>
+
+
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		@if(isset($page->isStation) && $page->isStation)
+			@include('layouts.fb')
+		@endif
 
 		<!-- S T Y L E S -->
 
@@ -44,13 +57,6 @@ data-ng:controller="MainController" ng-app="radioApp" ng-cloak>
 			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
 		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 	</script>
-
-		<title>
-			@if (isset($page->title))
-				{{ $page->title . " &raquo; " }} 
-			@endif
-			Nextuner
-		</title>
 
 		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">

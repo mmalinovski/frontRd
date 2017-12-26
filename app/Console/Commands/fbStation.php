@@ -36,7 +36,7 @@ class fbStation extends Command
     /**
      * Execute the console command.
      *
-     * @return mixed
+     * @return mixed 
      */
     public function handle()
     {

@@ -33,6 +33,6 @@ class Station extends LnModel {
 		return 'http://nextuner.com/logos/no-logo.png';
 	}
 	public function getUrlAttribute() {
-		return 'http://nextuner.com/station/' . $this->attributes['slug'];
+		return 'http://nextuner.com/stations/' . $this->attributes['slug'];
 	}
 }

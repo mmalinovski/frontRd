@@ -48,6 +48,7 @@ class StationsController extends LnController
         $page = new \StdClass();
 
         $page->title = $stationDetails->name;
+        $page->isStation = true;
 
 
         return view('Stations.stations')->with('streams', $streams)->with('station', $stationDetails)->with('page', $page);
