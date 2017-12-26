@@ -14,7 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\LogoDownload::class,
-        Commands\CheckStream::class
+        Commands\CheckStream::class,
+        Commands\fbStation::class
     ];
 
     /**
