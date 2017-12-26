@@ -26,9 +26,9 @@ class Station extends LnModel {
 	}
 	
 	public function getLogoAttribute() {
-		$logo = 'http://nextuner.com/logos/' . $this->attributes['slug'] . '.png';
+		$logo = '/logos/' . $this->attributes['slug'] . '.png';
 		if (file_exists(storage_path() . $logo)) {
-			return $logo;
+			return 'http://nextuner.com' . $logo;
 		}
 		return 'http://nextuner.com/logos/no-logo.png';
 	}
