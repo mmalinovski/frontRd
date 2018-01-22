@@ -113,6 +113,8 @@ data-ng:controller="MainController" ng-app="radioApp" ng-cloak>
 			   src="//c.statcounter.com/11545870/0/2616120b/1/" alt="Web
 			   Analytics"></a></div></noscript>
 		   <!-- End of StatCounter Code for Default Guide -->
+
+		   <script src="//load.sumome.com/" data-sumo-site-id="045ceb736a28ac92ab463a752555c4b60498a0dded3799d6409e558aba7db127" async="async"></script>
 		
 
 
