@@ -30,11 +30,11 @@ class HomePageController extends LnController
 	 */
 	public function index()
 	{
-		$genres = Genre::simplePaginate(20)->where('active', 1);
+		$genres = Genre::simplePaginate(20);
 
-		$randomStations = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(10)->get();
-		$randomStationsEditor = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(7)->get();
-		$randomStationsPopular = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(10)->get();
+		$randomStations = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->where('active', 1)->take(10)->get();
+		$randomStationsEditor = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->where('active', 1)->take(7)->get();
+		$randomStationsPopular = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->where('active', 1)->take(10)->get();
 
 
 		return view('home.homePage')->with('genres', $genres)->with('randomStations', $randomStations)->with('randomStationsEditor', $randomStationsEditor)->with('randomStationsPopular', $randomStationsPopular);
