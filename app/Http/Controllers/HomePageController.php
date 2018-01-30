@@ -30,7 +30,7 @@ class HomePageController extends LnController
 	 */
 	public function index()
 	{
-		$genres = Genre::simplePaginate(20);
+		$genres = Genre::simplePaginate(20)->where('active', 1);
 
 		$randomStations = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(10)->get();
 		$randomStationsEditor = Station::orderByRaw('RAND()')->whereNotNull('radioDetailsId')->take(7)->get();
